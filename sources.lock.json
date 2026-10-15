@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "repositories": {
+    "ucm": {
+      "url": "https://github.com/StorTecDev/ucm-prefetch.git",
+      "ref": "codex/ucm-deferred-pin-wait-v0.8.0",
+      "commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+      "license": "MIT"
+    },
+    "vllm": {
+      "url": "https://github.com/vllm-project/vllm.git",
+      "commit": "2cf0a6915ce544dc493a0990f2ea38d81601128a",
+      "distribution": "vllm",
+      "version": "0.28.0"
+    },
+    "aisbench_auto_tools_prefix": {
+      "url": "https://github.com/rayn-zzz/aisbench_auto_tools_prefix.git",
+      "commit": "ef2b6d8653d57487b622b0dc9db458f8a1e8dec6",
+      "license": "MIT"
+    }
+  },
+  "aisbench": {
+    "url": "https://github.com/AISBench/benchmark",
+    "distribution": "ais_bench_benchmark",
+    "version": "3.1.20260630",
+    "wheel_sha256": "25539c3179647c80caeef35823ce0bfe9cbd880214f02694325c686e84ce1753"
+  },
+  "model": {
+    "repository": "zai-org/GLM-5.2-FP8",
+    "revision": "f33c6dc501ee5a2c7e35155653b1b1abbc320951",
+    "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+    "reference_layers": 14,
+    "mtp": false
+  },
+  "historical_runtime": {
+    "reported_ucm_commit": "692c3d231861be577d0283f222f638360202571e",
+    "ready_fix_file": "ucm/store/pipeline/early_connector.py",
+    "actual_ready_fix_sha256": "dc6d3b9f8f8d810e5aa896be5e5e82e4d03c87dc526795ef676f895a17009e3a",
+    "note": "The archived executed Python source already contains the READY query-range fix. The chosen UCM commit includes this fix and integrates the original opt-in synchronization hook."
+  }
+}

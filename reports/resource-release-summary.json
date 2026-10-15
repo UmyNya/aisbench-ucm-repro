@@ -1,0 +1,19 @@
+{
+  "owned_live_processes": [],
+  "gpu_processes_after": "",
+  "gpu_idle": true,
+  "shm_free_bytes": 34358669312,
+  "all_valid_run_temporary_caches_removed": true,
+  "all_valid_run_shared_memory_removed": true,
+  "checked_at": "2026-10-15T10:59:14.883115+00:00",
+  "all_attempts_checked": [
+    "validation-n35-on/runs/R1-N35-early1",
+    "validation-n40/runs/R1-N40-early1",
+    "validation-n40/runs/R1-N40-early0-attempt2",
+    "validation-n40/runs/R1-N40-early0",
+    "validation-n35-final/runs/R1-N35-early1",
+    "validation-n35-final/runs/R1-N35-early0",
+    "validation-n35/runs/R1-N35-early0"
+  ],
+  "owned_live_processes_all_attempts": []
+}

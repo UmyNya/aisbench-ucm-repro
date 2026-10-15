@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==80.10.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aisbench-ucm-repro"
+version = "0.1.0"
+description = "Configurable AISBench experiments and UCM Early Prefetch reproduction"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+dependencies = []
+
+[project.scripts]
+aisbench-ucm = "aisbench_ucm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,74 @@
+{
+  "scope": "Only byte-identical recovered native libraries; incomplete and not an installable runtime",
+  "reference_reported_ucm_commit": "692c3d231861be577d0283f222f638360202571e",
+  "expected_libraries": [
+    {
+      "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77",
+      "recovered": true
+    },
+    {
+      "path": "ucm/shared/metrics/libmetrics.so",
+      "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3",
+      "recovered": true
+    },
+    {
+      "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "54d8aedff603740a187bd59d9e1a2f621a1f84ce266e07c32a7202a16dd7e3b4",
+      "recovered": false
+    },
+    {
+      "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "4e1d86b5fe29ffa91740780833898cd2ffe8d708af2d99a87d13542c7ff698ee",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/cache/libcachestore.so",
+      "sha256": "96272b73a16f9f7d93ef9a9093878a31735a04649fca61f4e94e4e527fef605e",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/compress/libcompressor.so",
+      "sha256": "a81b51c3c006eeee144ab98f984c4ea00883d9f2c0a04021c5f03cc017f5328e",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/delegator/libdelegator_store.so",
+      "sha256": "ed23bef8fade38905425dfc27b1db9709880caf21587c1fae48449678c01c2ad",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/empty/libemptystore.so",
+      "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f",
+      "recovered": true
+    },
+    {
+      "path": "ucm/store/fake/libfakestore.so",
+      "sha256": "a9ada94ed4c692f0cf1060ebe17df349e48162af46284a1ac06e25f4369cb3d8",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "ea29f502bb156778d51875de986121d88854471c71babc1c42166ba044fe8407",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "25f92c89ed86611d4f0592e6673524692535c58eb532baf8682082be9ad09d22",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "5b22b77f689f46a1309f6f7106925c75325693a02db7a0551c2f5f0926b71c26",
+      "recovered": false
+    },
+    {
+      "path": "ucm/store/posix/libposixstore.so",
+      "sha256": "429e484faf86d171f3cdc34387cecfe3a22847b7c864d3dde9824aef3c7b76ec",
+      "recovered": false
+    }
+  ],
+  "recovered_count": 3,
+  "expected_count": 13,
+  "source_archive_sha256": "5037c00d3059eae467a1cca0ba610822527643b71260e0df87abe0fba7d4edeb"
+}

@@ -1,0 +1,11 @@
+.git
+.venv*
+.work
+sources
+results
+log
+**/__pycache__
+.env
+config.local.json
+provenance/prompts
+provenance/decisions.json

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "label": "n40-b8192-graph-seed20260911",
+  "mode": "managed",
+  "workload": {
+    "source": "auto",
+    "n": 40,
+    "input_tokens": 40000,
+    "output_tokens": 1,
+    "prefix_ratio": 0.8992,
+    "seed": 20260911
+  },
+  "experiment": {
+    "repetitions": 3,
+    "early_prefetch": [
+      false,
+      true
+    ],
+    "alternate_order": true
+  }
+}

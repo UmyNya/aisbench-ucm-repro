@@ -1,0 +1,13 @@
+{
+  "format": "gzip-compressed original requests.json, byte-for-byte lossless",
+  "source_experiment": "b8192_graph_seed20260911_20261014T035708Z",
+  "compressed_sha256": "a4049981a622bc6923fd7d33020873714de2c16aeb5a26a67a7b0ecf4bcab6b0",
+  "uncompressed_sha256": "64d73400db471d78f4fb3f988be5c3416950449a348d32e45d53b97cf31a4492",
+  "formal_pool_size": 50,
+  "unrelated_index": 50,
+  "input_tokens": 40000,
+  "prefix_tokens": 35968,
+  "block_size": 64,
+  "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+  "reference_formal40_sha256": "40d9acae334b4f6654b9df8cca1e480cce65b50d982c8f564e00079412a569a5"
+}

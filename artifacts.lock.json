@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "compiled_kernel_cache": {
+    "filename": "compiled-kernel-cache.tar.gz",
+    "url": "https://github.com/UmyNya/aisbench-ucm-repro/releases/download/v0.1.0/compiled-kernel-cache.tar.gz",
+    "sha256": "d2899110eb9d7bb0ebd93764267f0e427a73bf62b6f752eb2305618026d90fbc",
+    "source": "Original N40 experiment evidence/compiled-kernel-cache.tar.gz",
+    "scope": "Historical generated kernels; not original UCM native libraries or a full runtime",
+    "compatibility": "Original L20X sm90a, vLLM 0.28.0, CUDA 13; regenerate for incompatible hardware"
+  },
+  "original_native_partial": {
+    "filename": "original-native-partial.tar.gz",
+    "url": "https://github.com/UmyNya/aisbench-ucm-repro/releases/download/v0.1.0/original-native-partial.tar.gz",
+    "sha256": "f41d3b61c845bbafc68d0e496e3bc1f4de9603b43058dd97bed5a4f8a323b60c",
+    "recovered_count": 3,
+    "expected_count": 13,
+    "scope": "Only byte-identical recovered native libraries; incomplete and not an installable runtime"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "os": "Ubuntu 24.04.1 LTS",
+  "architecture": "x86_64",
+  "kernel_release": "5.10.134-19.103.al8.x86_64",
+  "python": "3.12.3",
+  "cpu_quota": "1600000 100000",
+  "memory_limit_bytes": "268435456000",
+  "gpu": "NVIDIA L20X, GPU-a4b34e84-80ec-b28b-fd6b-f430ec1ed1d8, 580.105.08, 143771 MiB, 8.9",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8480C",
+  "docker_build_tested": false,
+  "docker_note": "Docker executable not available; local isolated environments were built and exercised.",
+  "torch_runtime_gpu_capability": [
+    9,
+    0
+  ],
+  "torch_runtime_version": "2.13.0+cu130",
+  "torch_runtime_cuda": "13.0",
+  "gpu_capability_note": "nvidia-smi reports compute_cap 8.9, while both historical and current PyTorch layouts report [9, 0]. Values are preserved from their respective interfaces; kernel cache compatibility must be checked on the target runtime."
+}

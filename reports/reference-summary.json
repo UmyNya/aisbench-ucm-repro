@@ -1,0 +1,1409 @@
+{
+  "generated": "2026-10-14T04:27:00.190668+00:00",
+  "scope": "n40, C8, fixed seed20260911, batch8192, default block/long-prefill, graph",
+  "arms": [
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 11037.700666114688,
+          "mean_ms": 20.74755764307272
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 2540.5189841985703,
+          "mean_ms": 4.775411624433403
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 4627.237910404801,
+          "mean_ms": 8.697815621061658
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 294,
+          "sum_ms": 5589.042903855443,
+          "mean_ms": 19.01035001311375
+        },
+        "posix_load_task_duration_ms": {
+          "count": 240884,
+          "sum_ms": 935975.9513158351,
+          "mean_ms": 3.885587881784739
+        }
+      },
+      "run": "20261014T040430Z-formal-R1-N40-early0-C8",
+      "repeat_id": 1,
+      "early": false,
+      "n": 40,
+      "duration_s": 8.306222700000001,
+      "input_tps": 192626.66771503727,
+      "output_tps": 4.815666692875932,
+      "request_rps": 4.815666692875932,
+      "new_input_equivalent_tps": 19416.768105675757,
+      "ttft_ms": {
+        "mean": 1544.3530941847712,
+        "p50": 1658.2749839872122,
+        "p95": 1796.516718622297,
+        "p99": 1818.474188297987
+      },
+      "e2e_ms": {
+        "mean": 1544.3876342382282,
+        "p50": 1658.3077413961291,
+        "p95": 1796.5353992767632,
+        "p99": 1818.5221792012453
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 265600.0,
+        "l2": 1101184.0
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.1846085409252669,
+        "l2": 0.765391459074733
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20719878144.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 8.207913859,
+        "mean_running": 2.77980009670567,
+        "mean_waiting": 2.6470471755958522,
+        "running_waiting_ratio": 1.050151324212775,
+        "maximum_running": 3,
+        "maximum_waiting": 5,
+        "running_integral": 22.816359739000006,
+        "waiting_integral": 21.726735198,
+        "soft_target_only": true,
+        "mean_waiting_normal": 2.6470471755958522,
+        "mean_waiting_skipped": 0.0,
+        "normal_waiting_request_seconds": 21.726735198,
+        "skipped_waiting_request_seconds": 0.0,
+        "skipped_share_of_waiting_request_seconds": 0.0,
+        "running_normal_waiting_ratio": 1.050151324212775,
+        "waiting_by_cause": {
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 21.726735198,
+            "mean_waiting": 2.6470471755958522,
+            "share_of_waiting_request_seconds": 1.0,
+            "maximum_waiting": 5
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 21.726735198
+          },
+          "skipped": {}
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.5122311274344669,
+          "normal": 0.48776887256553314,
+          "skipped": 0.0
+        },
+        "schedule_events": {
+          "count": 21,
+          "request_observation_counts": {
+            "running": 59,
+            "normal": 50,
+            "skipped": 0
+          },
+          "shares_of_request_observations": {
+            "running": 0.5412844036697247,
+            "normal": 0.45871559633027525,
+            "skipped": 0.0
+          },
+          "fraction_of_events_with_state": {
+            "running": 1.0,
+            "normal": 0.8095238095238095,
+            "skipped": 0.0
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 0,
+            "early_resolved_awaiting_reschedule": 0,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 50,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 1.0,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.8095238095238095,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    },
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 2992.4146477133036,
+          "mean_ms": 5.624839563370871
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 46.238068491220474,
+          "mean_ms": 0.08691366257748209
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 46.99963890016079,
+          "mean_ms": 0.08834518590255787
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 392,
+          "sum_ms": 1352.3207902908325,
+          "mean_ms": 3.4497979344153893
+        },
+        "posix_load_task_duration_ms": {
+          "count": 3924,
+          "sum_ms": 9574.358969926834,
+          "mean_ms": 2.4399487690945043
+        }
+      },
+      "run": "20261014T040749Z-formal-R1-N40-early1-C8",
+      "repeat_id": 1,
+      "early": true,
+      "n": 40,
+      "duration_s": 7.4210848,
+      "input_tps": 215601.90229870437,
+      "output_tps": 5.390047557467609,
+      "request_rps": 5.390047557467609,
+      "new_input_equivalent_tps": 21732.6717517094,
+      "ttft_ms": {
+        "mean": 1375.7534824311733,
+        "p50": 1474.932624027133,
+        "p95": 1791.748456005007,
+        "p99": 1885.4077382944524
+      },
+      "e2e_ms": {
+        "mean": 1375.7957495283335,
+        "p50": 1474.9985244125128,
+        "p95": 1791.7908950708807,
+        "p99": 1885.4343097098172
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 270724.5714285714,
+        "l2": 1096059.4285714286
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.1881704372140315,
+        "l2": 0.7618295627859685
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20623454208.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 7.296693092999999,
+        "mean_running": 1.5094299386890766,
+        "mean_waiting": 4.215376934313937,
+        "running_waiting_ratio": 0.35807709778028185,
+        "maximum_running": 3,
+        "maximum_waiting": 8,
+        "running_integral": 11.013847007999997,
+        "waiting_integral": 30.75831176100002,
+        "soft_target_only": true,
+        "mean_waiting_normal": 0.4768766066559846,
+        "mean_waiting_skipped": 3.738500327657955,
+        "normal_waiting_request_seconds": 3.479622242,
+        "skipped_waiting_request_seconds": 27.278689519000036,
+        "skipped_share_of_waiting_request_seconds": 0.8868721317009353,
+        "running_normal_waiting_ratio": 3.1652421561915047,
+        "waiting_by_cause": {
+          "early_pending": {
+            "label": "Early 查询/预取结果未就绪",
+            "request_seconds": 26.520084419000025,
+            "mean_waiting": 3.6345347242906203,
+            "share_of_waiting_request_seconds": 0.8622087136988497,
+            "maximum_waiting": 8
+          },
+          "early_resolved_awaiting_reschedule": {
+            "label": "Early 结果已返回，等待重新调度",
+            "request_seconds": 0.7586051,
+            "mean_waiting": 0.10396560336733353,
+            "share_of_waiting_request_seconds": 0.024663418002085304,
+            "maximum_waiting": 3
+          },
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 3.479622242,
+            "mean_waiting": 0.4768766066559846,
+            "share_of_waiting_request_seconds": 0.11312786829906525,
+            "maximum_waiting": 5
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 3.479622242
+          },
+          "skipped": {
+            "early_pending": 26.520084419000025,
+            "early_resolved_awaiting_reschedule": 0.7586051
+          }
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.2636647789477809,
+          "normal": 0.08330003391115855,
+          "skipped": 0.653035187141061
+        },
+        "schedule_events": {
+          "count": 104,
+          "request_observation_counts": {
+            "running": 44,
+            "normal": 9,
+            "skipped": 569
+          },
+          "shares_of_request_observations": {
+            "running": 0.0707395498392283,
+            "normal": 0.014469453376205787,
+            "skipped": 0.9147909967845659
+          },
+          "fraction_of_events_with_state": {
+            "running": 0.2692307692307692,
+            "normal": 0.038461538461538464,
+            "skipped": 0.9807692307692307
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 569,
+            "early_resolved_awaiting_reschedule": 0,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 9,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.9844290657439446,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.015570934256055362,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.9807692307692307,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.038461538461538464,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    },
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 13889.701016247272,
+          "mean_ms": 26.108460556855775
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 3524.3867598474026,
+          "mean_ms": 6.624787142570305
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 6892.726676538587,
+          "mean_ms": 12.95625315138832
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 294,
+          "sum_ms": 7252.564107999206,
+          "mean_ms": 24.66858540135784
+        },
+        "posix_load_task_duration_ms": {
+          "count": 240500,
+          "sum_ms": 971518.8975203782,
+          "mean_ms": 4.039579615469348
+        }
+      },
+      "run": "20261014T041433Z-formal-R2-N40-early0-C8",
+      "repeat_id": 2,
+      "early": false,
+      "n": 40,
+      "duration_s": 10.112373600000002,
+      "input_tps": 158222.0023991202,
+      "output_tps": 3.955550059978005,
+      "request_rps": 3.955550059978005,
+      "new_input_equivalent_tps": 15948.777841831316,
+      "ttft_ms": {
+        "mean": 1877.8814722783864,
+        "p50": 2062.986921519041,
+        "p95": 2306.051346939057,
+        "p99": 2340.074569117278
+      },
+      "e2e_ms": {
+        "mean": 1877.9156411066651,
+        "p50": 2063.0176113918424,
+        "p95": 2306.0882695019245,
+        "p99": 2340.1151364669204
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 267355.4285714286,
+        "l2": 1099428.5714285714
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.18582867310625317,
+        "l2": 0.7641713268937468
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20686848000.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 9.998589662000004,
+        "mean_running": 2.808307734811409,
+        "mean_waiting": 2.6534781049003517,
+        "running_waiting_ratio": 1.058349691910072,
+        "maximum_running": 3,
+        "maximum_waiting": 5,
+        "running_integral": 28.079116685000006,
+        "waiting_integral": 26.531038748000018,
+        "soft_target_only": true,
+        "mean_waiting_normal": 2.6534781049003517,
+        "mean_waiting_skipped": 0.0,
+        "normal_waiting_request_seconds": 26.531038748000018,
+        "skipped_waiting_request_seconds": 0.0,
+        "skipped_share_of_waiting_request_seconds": 0.0,
+        "running_normal_waiting_ratio": 1.058349691910072,
+        "waiting_by_cause": {
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 26.531038748000018,
+            "mean_waiting": 2.6534781049003517,
+            "share_of_waiting_request_seconds": 1.0,
+            "maximum_waiting": 5
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 26.531038748000018
+          },
+          "skipped": {}
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.5141739015822734,
+          "normal": 0.4858260984177266,
+          "skipped": 0.0
+        },
+        "schedule_events": {
+          "count": 21,
+          "request_observation_counts": {
+            "running": 59,
+            "normal": 50,
+            "skipped": 0
+          },
+          "shares_of_request_observations": {
+            "running": 0.5412844036697247,
+            "normal": 0.45871559633027525,
+            "skipped": 0.0
+          },
+          "fraction_of_events_with_state": {
+            "running": 1.0,
+            "normal": 0.8095238095238095,
+            "skipped": 0.0
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 0,
+            "early_resolved_awaiting_reschedule": 0,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 50,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 1.0,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.8095238095238095,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    },
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 2788.9765352010727,
+          "mean_ms": 5.242437096242618
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 43.42910274863243,
+          "mean_ms": 0.08163365178314366
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 24.667834863066673,
+          "mean_ms": 0.04636811064486217
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 350,
+          "sum_ms": 1195.997528731823,
+          "mean_ms": 3.417135796376637
+        },
+        "posix_load_task_duration_ms": {
+          "count": 3889,
+          "sum_ms": 9102.798637002707,
+          "mean_ms": 2.340652773721447
+        }
+      },
+      "run": "20261014T041111Z-formal-R2-N40-early1-C8",
+      "repeat_id": 2,
+      "early": true,
+      "n": 40,
+      "duration_s": 7.42501,
+      "input_tps": 215487.9252687875,
+      "output_tps": 5.387198131719687,
+      "request_rps": 5.387198131719687,
+      "new_input_equivalent_tps": 21721.18286709378,
+      "ttft_ms": {
+        "mean": 1388.542069401592,
+        "p50": 1307.6211912557483,
+        "p95": 1929.8656352795658,
+        "p99": 2030.5191297829151
+      },
+      "e2e_ms": {
+        "mean": 1388.601599773392,
+        "p50": 1307.649833150208,
+        "p95": 1929.8930779099462,
+        "p99": 2030.536007490009
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 276032.0,
+        "l2": 1090752.0
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.1918594306049822,
+        "l2": 0.7581405693950178
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20523589632.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 7.293502019000007,
+        "mean_running": 1.7364089054898753,
+        "mean_waiting": 4.1078830543887115,
+        "running_waiting_ratio": 0.42270164035822777,
+        "maximum_running": 3,
+        "maximum_waiting": 8,
+        "running_integral": 12.664501857999998,
+        "waiting_integral": 29.960853350999983,
+        "soft_target_only": true,
+        "mean_waiting_normal": 0.5203707836253354,
+        "mean_waiting_skipped": 3.5875122707633746,
+        "normal_waiting_request_seconds": 3.7953253609999997,
+        "skipped_waiting_request_seconds": 26.165527989999973,
+        "skipped_share_of_waiting_request_seconds": 0.8733238564156807,
+        "running_normal_waiting_ratio": 3.3368685562871296,
+        "waiting_by_cause": {
+          "early_pending": {
+            "label": "Early 查询/预取结果未就绪",
+            "request_seconds": 24.680796100999974,
+            "mean_waiting": 3.3839431368778716,
+            "share_of_waiting_request_seconds": 0.8237681287597978,
+            "maximum_waiting": 8
+          },
+          "early_resolved_awaiting_reschedule": {
+            "label": "Early 结果已返回，等待重新调度",
+            "request_seconds": 1.4847318889999999,
+            "mean_waiting": 0.20356913388550313,
+            "share_of_waiting_request_seconds": 0.049555727655882835,
+            "maximum_waiting": 4
+          },
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 3.7953253609999997,
+            "mean_waiting": 0.5203707836253354,
+            "share_of_waiting_request_seconds": 0.12667614358431903,
+            "maximum_waiting": 5
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 3.7953253609999997
+          },
+          "skipped": {
+            "early_pending": 24.680796100999974,
+            "early_resolved_awaiting_reschedule": 1.4847318889999999
+          }
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.2971119371534527,
+          "normal": 0.08903914917285309,
+          "skipped": 0.6138489136736941
+        },
+        "schedule_events": {
+          "count": 120,
+          "request_observation_counts": {
+            "running": 47,
+            "normal": 10,
+            "skipped": 722
+          },
+          "shares_of_request_observations": {
+            "running": 0.06033376123234917,
+            "normal": 0.012836970474967908,
+            "skipped": 0.926829268292683
+          },
+          "fraction_of_events_with_state": {
+            "running": 0.20833333333333334,
+            "normal": 0.041666666666666664,
+            "skipped": 0.9833333333333333
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 720,
+            "early_resolved_awaiting_reschedule": 2,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 10,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.9836065573770492,
+            "early_resolved_awaiting_reschedule": 0.00273224043715847,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.01366120218579235,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.9666666666666667,
+            "early_resolved_awaiting_reschedule": 0.016666666666666666,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.041666666666666664,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    },
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 14025.451518595219,
+          "mean_ms": 26.363630674051162
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 3863.2174246013165,
+          "mean_ms": 7.261686888348339
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 7324.647676199675,
+          "mean_ms": 13.768134729698636
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 294,
+          "sum_ms": 7500.642471015453,
+          "mean_ms": 25.51238935719542
+        },
+        "posix_load_task_duration_ms": {
+          "count": 240246,
+          "sum_ms": 819847.3497908562,
+          "mean_ms": 3.412532778031086
+        }
+      },
+      "run": "20261014T041756Z-formal-R3-N40-early0-C8",
+      "repeat_id": 3,
+      "early": false,
+      "n": 40,
+      "duration_s": 10.447514,
+      "input_tps": 153146.48058858787,
+      "output_tps": 3.8286620147146966,
+      "request_rps": 3.8286620147146966,
+      "new_input_equivalent_tps": 15437.165243329657,
+      "ttft_ms": {
+        "mean": 1941.5330881718546,
+        "p50": 2045.3589465469122,
+        "p95": 2316.5857003070414,
+        "p99": 2353.730038665235
+      },
+      "e2e_ms": {
+        "mean": 1941.5745604317635,
+        "p50": 2045.3916173428297,
+        "p95": 2316.635299939662,
+        "p99": 2353.764848075807
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 268516.5714285714,
+        "l2": 1098267.4285714286
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.18663573970513472,
+        "l2": 0.7633642602948654
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20664999936.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 10.305872143000004,
+        "mean_running": 2.7944005116113138,
+        "mean_waiting": 2.6692555000970755,
+        "running_waiting_ratio": 1.0468838638750344,
+        "maximum_running": 3,
+        "maximum_waiting": 5,
+        "running_integral": 28.798734388999996,
+        "waiting_integral": 27.509005900999995,
+        "soft_target_only": true,
+        "mean_waiting_normal": 2.6692555000970755,
+        "mean_waiting_skipped": 0.0,
+        "normal_waiting_request_seconds": 27.509005900999995,
+        "skipped_waiting_request_seconds": 0.0,
+        "skipped_share_of_waiting_request_seconds": 0.0,
+        "running_normal_waiting_ratio": 1.0468838638750344,
+        "waiting_by_cause": {
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 27.509005900999995,
+            "mean_waiting": 2.6692555000970755,
+            "share_of_waiting_request_seconds": 1.0,
+            "maximum_waiting": 5
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 27.509005900999995
+          },
+          "skipped": {}
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.5114524973063876,
+          "normal": 0.48854750269361236,
+          "skipped": 0.0
+        },
+        "schedule_events": {
+          "count": 21,
+          "request_observation_counts": {
+            "running": 59,
+            "normal": 51,
+            "skipped": 0
+          },
+          "shares_of_request_observations": {
+            "running": 0.5363636363636364,
+            "normal": 0.4636363636363636,
+            "skipped": 0.0
+          },
+          "fraction_of_events_with_state": {
+            "running": 1.0,
+            "normal": 0.8571428571428571,
+            "skipped": 0.0
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 0,
+            "early_resolved_awaiting_reschedule": 0,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 51,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 1.0,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.0,
+            "early_resolved_awaiting_reschedule": 0.0,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.8571428571428571,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    },
+    {
+      "native_timing": {
+        "cache_load_duration_ms": {
+          "count": 532,
+          "sum_ms": 2578.8593478500843,
+          "mean_ms": 4.847479977161813
+        },
+        "cache_load_queue_wait_duration_ms": {
+          "count": 532,
+          "sum_ms": 41.58935509622097,
+          "mean_ms": 0.07817547950417475
+        },
+        "cache_load_backend_submit_duration_ms": {
+          "count": 532,
+          "sum_ms": 24.762891232967377,
+          "mean_ms": 0.04654678803189356
+        },
+        "connector_wait_for_layer_load_duration_ms": {
+          "count": 434,
+          "sum_ms": 1137.8207970410585,
+          "mean_ms": 2.621706905624559
+        },
+        "posix_load_task_duration_ms": {
+          "count": 3891,
+          "sum_ms": 9600.840928032994,
+          "mean_ms": 2.467448195331019
+        }
+      },
+      "run": "20261014T042133Z-formal-R3-N40-early1-C8",
+      "repeat_id": 3,
+      "early": true,
+      "n": 40,
+      "duration_s": 7.5168892,
+      "input_tps": 212854.008809921,
+      "output_tps": 5.321350220248025,
+      "request_rps": 5.321350220248025,
+      "new_input_equivalent_tps": 21455.684088040038,
+      "ttft_ms": {
+        "mean": 1388.7526106555015,
+        "p50": 1512.4917291104794,
+        "p95": 1739.8540032096207,
+        "p99": 1779.721790459007
+      },
+      "e2e_ms": {
+        "mean": 1388.7986310757697,
+        "p50": 1512.538157403469,
+        "p95": 1739.9144193157554,
+        "p99": 1779.7704418562353
+      },
+      "failed_requests": 0,
+      "source_tokens": {
+        "hbm": 71936,
+        "l1": 258189.7142857143,
+        "l2": 1108594.2857142857
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.1794579308591764,
+        "l2": 0.7705420691408236
+      },
+      "total_reused_tokens": 1438720,
+      "ssd_read_bytes": 20859310080.0,
+      "extra_read_shards": 0.0,
+      "queue": {
+        "active_seconds": 7.395224587999998,
+        "mean_running": 1.3155807498783705,
+        "mean_waiting": 4.619414707084486,
+        "running_waiting_ratio": 0.28479381768013873,
+        "maximum_running": 3,
+        "maximum_waiting": 8,
+        "running_integral": 9.729015109,
+        "waiting_integral": 34.161609223999996,
+        "soft_target_only": true,
+        "mean_waiting_normal": 0.23827223582354304,
+        "mean_waiting_skipped": 4.381142471260943,
+        "normal_waiting_request_seconds": 1.7620766969999995,
+        "skipped_waiting_request_seconds": 32.399532527,
+        "skipped_share_of_waiting_request_seconds": 0.9484193884004134,
+        "running_normal_waiting_ratio": 5.521334641996008,
+        "waiting_by_cause": {
+          "early_pending": {
+            "label": "Early 查询/预取结果未就绪",
+            "request_seconds": 31.379561783000003,
+            "mean_waiting": 4.243219581717457,
+            "share_of_waiting_request_seconds": 0.918562166590048,
+            "maximum_waiting": 8
+          },
+          "early_resolved_awaiting_reschedule": {
+            "label": "Early 结果已返回，等待重新调度",
+            "request_seconds": 1.0199707439999999,
+            "mean_waiting": 0.1379228895434866,
+            "share_of_waiting_request_seconds": 0.029857221810365615,
+            "maximum_waiting": 4
+          },
+          "ordinary_waiting_unattributed": {
+            "label": "普通排队，具体调度约束未归因",
+            "request_seconds": 1.7620766969999995,
+            "mean_waiting": 0.23827223582354304,
+            "share_of_waiting_request_seconds": 0.05158061159958662,
+            "maximum_waiting": 4
+          }
+        },
+        "waiting_by_queue_and_cause_request_seconds": {
+          "normal": {
+            "ordinary_waiting_unattributed": 1.7620766969999995
+          },
+          "skipped": {
+            "early_pending": 31.379561783000003,
+            "early_resolved_awaiting_reschedule": 1.0199707439999999
+          }
+        },
+        "detailed_cause_sample_fraction": 1.0,
+        "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+        "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+        "schema_valid": true,
+        "shares_of_running_plus_waiting": {
+          "running": 0.2216649969520952,
+          "normal": 0.04014699548657704,
+          "skipped": 0.7381880075613277
+        },
+        "schedule_events": {
+          "count": 116,
+          "request_observation_counts": {
+            "running": 43,
+            "normal": 4,
+            "skipped": 628
+          },
+          "shares_of_request_observations": {
+            "running": 0.0637037037037037,
+            "normal": 0.005925925925925926,
+            "skipped": 0.9303703703703704
+          },
+          "fraction_of_events_with_state": {
+            "running": 0.2672413793103448,
+            "normal": 0.017241379310344827,
+            "skipped": 0.9827586206896551
+          },
+          "cause_request_observation_counts": {
+            "early_pending": 627,
+            "early_resolved_awaiting_reschedule": 1,
+            "early_pending_state_unknown": 0,
+            "connector_lookup_pending": 0,
+            "remote_kv_transfer": 0,
+            "structured_output_grammar": 0,
+            "streaming_input": 0,
+            "stale_output_inflight": 0,
+            "kv_allocation_rejected_last_step": 0,
+            "preempted_awaiting_reschedule": 0,
+            "ordinary_waiting_unattributed": 4,
+            "skipped_other_or_unobserved": 0
+          },
+          "cause_shares_of_waiting_observations": {
+            "early_pending": 0.9920886075949367,
+            "early_resolved_awaiting_reschedule": 0.0015822784810126582,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.006329113924050633,
+            "skipped_other_or_unobserved": 0.0
+          },
+          "fraction_of_events_with_cause": {
+            "early_pending": 0.9741379310344828,
+            "early_resolved_awaiting_reschedule": 0.008620689655172414,
+            "early_pending_state_unknown": 0.0,
+            "connector_lookup_pending": 0.0,
+            "remote_kv_transfer": 0.0,
+            "structured_output_grammar": 0.0,
+            "streaming_input": 0.0,
+            "stale_output_inflight": 0.0,
+            "kv_allocation_rejected_last_step": 0.0,
+            "preempted_awaiting_reschedule": 0.0,
+            "ordinary_waiting_unattributed": 0.017241379310344827,
+            "skipped_other_or_unobserved": 0.0
+          }
+        }
+      },
+      "max_concurrency": 8
+    }
+  ],
+  "aggregate": {
+    "off": {
+      "performance_run_mean": {
+        "input_tps": {
+          "mean": 167998.38356758177,
+          "sample_sd": 21479.164682271818
+        },
+        "output_tps": {
+          "mean": 4.199959589189545,
+          "sample_sd": 0.5369791170567956
+        },
+        "request_rps": {
+          "mean": 4.199959589189545,
+          "sample_sd": 0.5369791170567956
+        },
+        "duration_s": {
+          "mean": 9.622036766666668,
+          "sample_sd": 1.1517832979586233
+        },
+        "new_input_equivalent_tps": {
+          "mean": 16934.237063612243,
+          "sample_sd": 2165.099799973
+        },
+        "ttft_mean_ms": {
+          "mean": 1787.9225515450041,
+          "sample_sd": 213.3247347836887
+        }
+      },
+      "pooled_ttft_ms": {
+        "mean": 1787.9225515450041,
+        "p50": 1821.1729489266872,
+        "p95": 2304.735328257084,
+        "p99": 2350.652033369988
+      },
+      "pooled_e2e_ms": {
+        "mean": 1787.9592785922189,
+        "p50": 1821.2165627628565,
+        "p95": 2304.772059712559,
+        "p99": 2350.675156135112
+      },
+      "pooled_input_tps": 166284.9601180939,
+      "source_tokens": {
+        "hbm": 215808,
+        "l1": 801472.0,
+        "l2": 3298880.0
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.18569098457888494,
+        "l2": 0.7643090154211151
+      },
+      "total_reused_tokens": 4316160.0,
+      "queue": {
+        "active_seconds": 28.512375664000007,
+        "running_integral": 79.69421081300001,
+        "waiting_integral": 75.76677984700001,
+        "normal_waiting_request_seconds": 75.76677984700001,
+        "skipped_waiting_request_seconds": 0.0,
+        "mean_running": 2.79507438286255,
+        "mean_waiting": 2.6573296010077425,
+        "mean_waiting_normal": 2.6573296010077425,
+        "mean_waiting_skipped": 0.0,
+        "running_waiting_ratio": 1.0518357910146225,
+        "shares_of_running_plus_waiting": {
+          "running": 0.5126315641928124,
+          "normal": 0.4873684358071876,
+          "skipped": 0.0
+        },
+        "skipped_share_of_waiting_request_seconds": 0.0,
+        "waiting_by_cause": {
+          "early_pending": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "early_resolved_awaiting_reschedule": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "early_pending_state_unknown": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "connector_lookup_pending": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "remote_kv_transfer": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "structured_output_grammar": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "streaming_input": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "stale_output_inflight": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "kv_allocation_rejected_last_step": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "preempted_awaiting_reschedule": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "ordinary_waiting_unattributed": {
+            "request_seconds": 75.76677984700001,
+            "mean_waiting": 2.6573296010077425,
+            "share_of_waiting_request_seconds": 1.0,
+            "share_of_running_plus_waiting": 0.4873684358071876
+          },
+          "skipped_other_or_unobserved": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          }
+        },
+        "schedule_request_observation_shares": {
+          "running": 0.5396341463414634,
+          "normal": 0.4603658536585366,
+          "skipped": 0.0
+        },
+        "schedule_cause_shares_of_waiting_observations": {
+          "early_pending": 0.0,
+          "early_resolved_awaiting_reschedule": 0.0,
+          "early_pending_state_unknown": 0.0,
+          "connector_lookup_pending": 0.0,
+          "remote_kv_transfer": 0.0,
+          "structured_output_grammar": 0.0,
+          "streaming_input": 0.0,
+          "stale_output_inflight": 0.0,
+          "kv_allocation_rejected_last_step": 0.0,
+          "preempted_awaiting_reschedule": 0.0,
+          "ordinary_waiting_unattributed": 1.0,
+          "skipped_other_or_unobserved": 0.0
+        },
+        "schedule_events": 63
+      },
+      "failed_requests": 0,
+      "ssd_read_bytes": 62071726080.0
+    },
+    "on": {
+      "performance_run_mean": {
+        "input_tps": {
+          "mean": 214647.94545913764,
+          "sample_sd": 1554.6395778086585
+        },
+        "output_tps": {
+          "mean": 5.36619863647844,
+          "sample_sd": 0.03886598944521643
+        },
+        "request_rps": {
+          "mean": 5.36619863647844,
+          "sample_sd": 0.03886598944521643
+        },
+        "duration_s": {
+          "mean": 7.454328,
+          "sample_sd": 0.05421512342363489
+        },
+        "new_input_equivalent_tps": {
+          "mean": 21636.512902281072,
+          "sample_sd": 156.70766944311225
+        },
+        "ttft_mean_ms": {
+          "mean": 1384.3493874960889,
+          "sample_sd": 7.445016441800576
+        }
+      },
+      "pooled_ttft_ms": {
+        "mean": 1384.3493874960889,
+        "p50": 1474.932624027133,
+        "p95": 1806.0025213286278,
+        "p99": 2001.1667908355596
+      },
+      "pooled_e2e_ms": {
+        "mean": 1384.3986601258318,
+        "p50": 1474.9985244125128,
+        "p95": 1806.0350837185977,
+        "p99": 2001.1838616430762
+      },
+      "pooled_input_tps": 214640.40755920587,
+      "source_tokens": {
+        "hbm": 215808,
+        "l1": 804946.2857142857,
+        "l2": 3295405.7142857146
+      },
+      "source_shares": {
+        "hbm": 0.05,
+        "l1": 0.18649593289273003,
+        "l2": 0.76350406710727
+      },
+      "total_reused_tokens": 4316160.0,
+      "queue": {
+        "active_seconds": 21.985419700000005,
+        "running_integral": 33.407363974999996,
+        "waiting_integral": 94.880774336,
+        "normal_waiting_request_seconds": 9.037024299999999,
+        "skipped_waiting_request_seconds": 85.843750036,
+        "mean_running": 1.519523594766762,
+        "mean_waiting": 4.315622609469674,
+        "mean_waiting_normal": 0.41104624898291103,
+        "mean_waiting_skipped": 3.904576360486763,
+        "running_waiting_ratio": 0.35209834878344215,
+        "shares_of_running_plus_waiting": {
+          "running": 0.26040882980165203,
+          "normal": 0.0704431790731281,
+          "skipped": 0.6691479911252198
+        },
+        "skipped_share_of_waiting_request_seconds": 0.9047538938921672,
+        "waiting_by_cause": {
+          "early_pending": {
+            "request_seconds": 82.580442303,
+            "mean_waiting": 3.756145819813482,
+            "share_of_waiting_request_seconds": 0.8703601217519473,
+            "share_of_running_plus_waiting": 0.6437106609404992
+          },
+          "early_resolved_awaiting_reschedule": {
+            "request_seconds": 3.2633077329999995,
+            "mean_waiting": 0.1484305406732808,
+            "share_of_waiting_request_seconds": 0.03439377214021981,
+            "share_of_running_plus_waiting": 0.025437330184720504
+          },
+          "early_pending_state_unknown": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "connector_lookup_pending": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "remote_kv_transfer": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "structured_output_grammar": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "streaming_input": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "stale_output_inflight": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "kv_allocation_rejected_last_step": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "preempted_awaiting_reschedule": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          },
+          "ordinary_waiting_unattributed": {
+            "request_seconds": 9.037024299999999,
+            "mean_waiting": 0.41104624898291103,
+            "share_of_waiting_request_seconds": 0.09524610610783284,
+            "share_of_running_plus_waiting": 0.0704431790731281
+          },
+          "skipped_other_or_unobserved": {
+            "request_seconds": 0,
+            "mean_waiting": 0.0,
+            "share_of_waiting_request_seconds": 0.0,
+            "share_of_running_plus_waiting": 0.0
+          }
+        },
+        "schedule_request_observation_shares": {
+          "running": 0.06454720616570328,
+          "normal": 0.011078998073217727,
+          "skipped": 0.924373795761079
+        },
+        "schedule_cause_shares_of_waiting_observations": {
+          "early_pending": 0.9866117404737385,
+          "early_resolved_awaiting_reschedule": 0.001544799176107106,
+          "early_pending_state_unknown": 0.0,
+          "connector_lookup_pending": 0.0,
+          "remote_kv_transfer": 0.0,
+          "structured_output_grammar": 0.0,
+          "streaming_input": 0.0,
+          "stale_output_inflight": 0.0,
+          "kv_allocation_rejected_last_step": 0.0,
+          "preempted_awaiting_reschedule": 0.0,
+          "ordinary_waiting_unattributed": 0.01184346035015448,
+          "skipped_other_or_unobserved": 0.0
+        },
+        "schedule_events": 340
+      },
+      "failed_requests": 0,
+      "ssd_read_bytes": 62006353920.0
+    }
+  },
+  "changes_percent": {
+    "input_tps": 27.7678635358952,
+    "ttft_mean_ms": -22.572183772735244
+  },
+  "invalid_attempts": [
+    {
+      "repeat_id": 1,
+      "n": 40,
+      "early": 0,
+      "order_seed": 20260911,
+      "plan": "pair-R1.json",
+      "plan_sha256": "464f71b46bd4b2b63d8689570ce96e64be95300d67c501dbc1a060bab5135a61",
+      "run": "20261014T035737Z-formal-R1-N40-early0-C8",
+      "returncode": 0,
+      "passed": false
+    }
+  ],
+  "provenance": {
+    "experiment": "b8192_graph_seed20260911_20261014T035708Z",
+    "publication_scope": "aggregated statistics only; raw request records and logs are not published",
+    "default_reproduction_ucm_commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0"
+  }
+}

@@ -1,0 +1,1811 @@
+{
+  "scope": "One qualified off/on pair for N35 and N40; no performance-based selection or rerun",
+  "valid_runs": 4,
+  "valid_requests": 150,
+  "records": [
+    {
+      "n": 35,
+      "early_prefetch": false,
+      "campaign": "validation-n35-final",
+      "arm": "R1-N35-early0",
+      "passed": true,
+      "formal_sha256": "1ae8d361148f19e6650b75064b5fd90bcac99c681ba7febcee07c663a6591b27",
+      "formal_order": [
+        7,
+        12,
+        30,
+        34,
+        4,
+        29,
+        9,
+        2,
+        6,
+        33,
+        13,
+        1,
+        14,
+        10,
+        22,
+        19,
+        21,
+        15,
+        25,
+        18,
+        3,
+        24,
+        27,
+        17,
+        8,
+        16,
+        31,
+        20,
+        26,
+        32,
+        11,
+        5,
+        28,
+        0,
+        23
+      ],
+      "warmup_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "performance": {
+        "requests": 35,
+        "successful_requests": 35,
+        "failed_requests": 0,
+        "duration_s": 6.3942751,
+        "input_tokens": 1400000,
+        "output_tokens": 35,
+        "requests_per_s": 5.473646262107178,
+        "input_tokens_per_s": 218945.8504842871,
+        "output_tokens_per_s": 5.473646262107178,
+        "ttft_ms": {
+          "count": 35,
+          "mean": 1347.7622383407183,
+          "min": 335.9892014414072,
+          "max": 1738.707322627306,
+          "p50": 1424.8940404504538,
+          "p95": 1567.8495548665524,
+          "p99": 1680.7074812427156
+        },
+        "e2e_ms": {
+          "count": 35,
+          "mean": 1347.7937406195063,
+          "min": 336.0346797853708,
+          "max": 1738.7461718171835,
+          "p50": 1424.913451075554,
+          "p95": 1567.8838899359107,
+          "p99": 1680.740732699632
+        },
+        "tpot_ms": null,
+        "stream": true,
+        "checks": {
+          "request_count": true,
+          "all_requests_succeeded": true,
+          "input_identity": true,
+          "input_token_counts": true,
+          "output_token_counts": true
+        },
+        "throughput_definition": "All successful input tokens, including reused prefix tokens, divided by AISBench Benchmark Duration."
+      },
+      "observed_max_concurrency": 8,
+      "checks": {
+        "request_count": true,
+        "all_requests_succeeded": true,
+        "input_identity": true,
+        "input_token_counts": true,
+        "output_token_counts": true,
+        "aisbench_exit_success": true,
+        "request_mapping": true,
+        "matches_complete": true,
+        "loaded_shards_match": true,
+        "completed_load_shards": true,
+        "load_plans_match": true,
+        "source_accounting_exact": true,
+        "source_counts_in_range": true,
+        "physical_reads_reconciled": true,
+        "no_native_errors": true,
+        "exact_prefix_hits": true,
+        "queue_schema": true,
+        "no_gpu_compilation_in_measurement": true
+      },
+      "observation": {
+        "sources": {
+          "checks": {
+            "request_mapping": true,
+            "matches_complete": true,
+            "loaded_shards_match": true,
+            "completed_load_shards": true,
+            "load_plans_match": true,
+            "source_accounting_exact": true,
+            "source_counts_in_range": true,
+            "physical_reads_reconciled": true,
+            "no_native_errors": true,
+            "exact_prefix_hits": true
+          },
+          "hbm_tokens": 71936,
+          "external_tokens": 1186944,
+          "original_l1_shards": 100584.0,
+          "original_l2_shards": 159060.0,
+          "l2_shards_bounds": [
+            159060.0,
+            159060.0
+          ],
+          "token_equivalents": {
+            "hbm": 71936,
+            "l1": 459812.5714285714,
+            "l2": 727131.4285714285
+          },
+          "fractions_of_reused_tokens": {
+            "hbm": 0.05714285714285714,
+            "l1": 0.36525528360810516,
+            "l2": 0.5776018592490376
+          },
+          "ssd_read_bytes": 13681704960.0,
+          "errors": {},
+          "definition": "L2 remains L2 after early prefetch into L1. Physical block-layer shards are converted to full-layer token equivalents.",
+          "limitation": "OFF only identifies aggregate L1/L2 sources; per-request source classes are not inferred."
+        },
+        "queue": {
+          "active_seconds": 6.2866847120000005,
+          "mean_running": 2.7411179958025538,
+          "mean_waiting": 2.6501842671062836,
+          "running_waiting_ratio": 1.0343122287098776,
+          "maximum_running": 3,
+          "maximum_waiting": 5,
+          "running_integral": 17.232544597999997,
+          "waiting_integral": 16.660872916,
+          "soft_target_only": true,
+          "mean_waiting_normal": 2.6501842671062836,
+          "mean_waiting_skipped": 0.0,
+          "normal_waiting_request_seconds": 16.660872916,
+          "skipped_waiting_request_seconds": 0.0,
+          "skipped_share_of_waiting_request_seconds": 0.0,
+          "running_normal_waiting_ratio": 1.0343122287098776,
+          "waiting_by_cause": {
+            "ordinary_waiting_unattributed": {
+              "label": "普通排队，具体调度约束未归因",
+              "request_seconds": 16.660872916,
+              "mean_waiting": 2.6501842671062836,
+              "share_of_waiting_request_seconds": 1.0,
+              "maximum_waiting": 5
+            }
+          },
+          "waiting_by_queue_and_cause_request_seconds": {
+            "normal": {
+              "ordinary_waiting_unattributed": 16.660872916
+            },
+            "skipped": {}
+          },
+          "detailed_cause_sample_fraction": 1.0,
+          "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+          "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+          "schedule_events": {
+            "count": 18,
+            "request_observations": {
+              "running": 51,
+              "normal": 44,
+              "skipped": 0
+            },
+            "fractions": {
+              "running": 0.5368421052631579,
+              "normal": 0.4631578947368421,
+              "skipped": 0.0
+            },
+            "waiting_cause_observations": {
+              "ordinary_waiting_unattributed": 44
+            },
+            "waiting_cause_fractions": {
+              "ordinary_waiting_unattributed": 1.0
+            },
+            "events_with_waiting_fraction": 0.8888888888888888
+          },
+          "time_weighted_fractions": {
+            "running": 0.508433373261399,
+            "normal": 0.4915666267386011,
+            "skipped": 0.0
+          }
+        },
+        "metric_delta": {
+          "total_prefix_query_blocks_total": 21875.0,
+          "total_prefix_query_tokens_total": 1400000.0,
+          "posix_s2h_bytes_total": 13681704960.0,
+          "posix_lookup_query_blocks_total": 12747.0,
+          "cache_load_shards_total": 259644.0,
+          "cache_dump_shards_total": 30870.0,
+          "load_bytes_total": 21336505344.0,
+          "save_bytes_total": 2536773120.0,
+          "cache_lookup_hit_blocks_total": 8004.0,
+          "gpu_hbm_hit_blocks_total": 1124.0,
+          "cache_load_success_shards_total": 100584.0,
+          "cache_posix_load_success_shards_total": 159060.0,
+          "cache_lookup_miss_blocks_total": 12747.0,
+          "cache_load_wait_shards_total": 159060.0,
+          "gpu_hbm_hit_tokens_total": 71936.0,
+          "cache_load_backend_shards_total": 159060.0,
+          "cache_dump_backend_shards_total": 30870.0,
+          "ucm_hit_tokens_total": 1186944.0,
+          "posix_lookup_hit_blocks_total": 10542.0,
+          "cache_dump_bytes_total": 2655313920.0,
+          "posix_healthy_count_total": 12.0,
+          "cache_load_bytes_total": 22333538304.0,
+          "posix_h2s_bytes_total": 2655313920.0
+        },
+        "histogram_sum_delta_ms": {
+          "posix_load_task_duration_ms": 614138.5859642178,
+          "cache_lookup_duration_ms": 30.838447000000006,
+          "connector_update_connector_output_duration_ms": 0.04060007631778717,
+          "cache_dump_backend_wait_duration_ms": 2104.0115542709827,
+          "connector_register_kv_caches_duration_ms": 0.0,
+          "cache_dump_duration_ms": 8354.950370267034,
+          "cache_d2h_duration_ms": 1992.1092092990875,
+          "connector_build_connector_meta_duration_ms": 1.0068230330944061,
+          "posix_s2h_bandwidth_gbps": 29234.714052681375,
+          "cache_shard_backend_wait_ms": 3246.1519222706556,
+          "connector_update_state_after_alloc_duration_ms": 0.06946176290512085,
+          "connector_request_finished_all_groups_duration_ms": 0.11290237307548523,
+          "connector_wait_for_save_duration_ms": 4.210323095321655,
+          "cache_dump_queue_wait_duration_ms": 6134.555872529745,
+          "cache_load_backend_submit_duration_ms": 2766.329238191247,
+          "posix_dump_task_duration_ms": 3240.3727434575558,
+          "layerwise_layer_load_duration_ms": 4661.820352077484,
+          "interval_lookup_hit_rates": 29.67360000000001,
+          "cache_h2d_sync_ms": 230.91709427535534,
+          "cache_dump_backend_submit_duration_ms": 13.320786878466606,
+          "connector_get_kv_connector_stats_duration_ms": 24.781908839941025,
+          "connector_build_connector_worker_meta_duration_ms": 0.05348026752471924,
+          "connector_get_block_ids_with_load_errors_duration_ms": 0.04389137029647827,
+          "posix_load_queue_wait_duration_ms": 115.73063023388386,
+          "cache_load_queue_wait_duration_ms": 1249.721199274063,
+          "cache_dump_bandwidth_gbps": 437.13366295644096,
+          "connector_get_num_new_matched_tokens_duration_ms": 213.69548700749874,
+          "connector_get_block_size_duration_ms": 0.0796690583229065,
+          "save_completion_wait_duration": 2.224193572998047,
+          "connector_start_load_kv_duration_ms": 9.670594707131386,
+          "cache_load_duration_ms": 6977.514944970608,
+          "cache_lookup_backend_duration_ms": 12.174334000000004,
+          "connector_get_finished_duration_ms": 0.34113600850105286,
+          "connector_has_connector_metadata_duration_ms": 0.34392811357975006,
+          "layerwise_batch_load_duration_sum_ms": 4661.820352077484,
+          "posix_h2s_bandwidth_gbps": 279.6216350199195,
+          "cache_h2d_submit_ms": 968.0603630840778,
+          "connector_clear_connector_metadata_duration_ms": 0.05657970905303955,
+          "cache_dump_prereq_wait_ms": 1571.798114106059,
+          "cache_load_bandwidth_gbps": 2453.0242650370037,
+          "cache_dump_mkbuf_duration_ms": 212.70325779914856,
+          "connector_bind_connector_metadata_duration_ms": 61.62841059267521,
+          "save_duration": 24735.840559005737,
+          "connector_save_kv_layer_duration_ms": 40.81681929528713,
+          "connector_handle_preemptions_duration_ms": 0.07273070514202118,
+          "posix_dump_queue_wait_duration_ms": 0.6830338388681412,
+          "connector_wait_for_layer_load_duration_ms": 3968.3677088469267
+        }
+      },
+      "actual_layout": {
+        "connector_class": "UCMLayerWiseConnector",
+        "block_size": 64,
+        "num_blocks": 5000,
+        "physical_block_bytes": 1204224,
+        "physical_shard_bytes": 86016,
+        "num_hidden_layers": 14,
+        "num_nextn_predict_layers": 0,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 16,
+        "max_model_len": 40960,
+        "cudagraph_mode": "FULL_AND_PIECEWISE",
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "sync_hook_installed": true,
+        "gpu_name": "NVIDIA L20X",
+        "gpu_capability": [
+          9,
+          0
+        ],
+        "torch": "2.13.0+cu130",
+        "cuda": "13.0"
+      },
+      "ucm_commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+      "native_libraries": [
+        {
+          "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77"
+        },
+        {
+          "path": "ucm/shared/metrics/libmetrics.so",
+          "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3"
+        },
+        {
+          "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "286fea27339e87bb06ba054ab966c7911e07130f5263c90e295c62618132c1b8"
+        },
+        {
+          "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d6d010ca6f2ab929f9ce3002e41e2ce66c7103c6882cf8df2bcaf817a8b76a5b"
+        },
+        {
+          "path": "ucm/store/cache/libcachestore.so",
+          "sha256": "da8b8e6aa1cae79815b5e39080c97720f2d2cd83579d67461923b61ae959a6cf"
+        },
+        {
+          "path": "ucm/store/compress/libcompressor.so",
+          "sha256": "5da58d1184d66e7cb400a2ba11cc3382f04b64207788f505477cc3a356406006"
+        },
+        {
+          "path": "ucm/store/delegator/libdelegator_store.so",
+          "sha256": "966b1dd1f81af2ba1ab910cdd0084548a3b3f8502467f614169a8040f19294e9"
+        },
+        {
+          "path": "ucm/store/empty/libemptystore.so",
+          "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f"
+        },
+        {
+          "path": "ucm/store/fake/libfakestore.so",
+          "sha256": "3db1a1ad9ec506d16b5d01c412f466155668d06cefe13e4b6fe91feb804dbcca"
+        },
+        {
+          "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bb9c3bcc71374aa980590ac87918f1afee5f25b66712f3ff5f9c7b839fbf903e"
+        },
+        {
+          "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bf04b02305f92d8a208faf69f3d166d208933137d67d12d68b99ffaaf93401b9"
+        },
+        {
+          "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "88e15b191757fa058676e540bef9e243bf87aa421b5ace96d569bda1d53c71b6"
+        },
+        {
+          "path": "ucm/store/posix/libposixstore.so",
+          "sha256": "a1c6ee6cf86a77e6ce61224add662e6981cc21935ed03c2e1b8adc5ccd692959"
+        }
+      ],
+      "vllm_version": "0.28.0",
+      "vllm_commit": "g2cf0a6915",
+      "cleanup": {
+        "finished": "2026-10-15T10:36:35.551329+00:00",
+        "owned_pids": [
+          460583,
+          460957,
+          460959,
+          461107,
+          461108,
+          461376,
+          461378,
+          461691,
+          461697
+        ],
+        "removed_shm": [
+          "uc_shm_cache_aff84e10909f4538a10ca74ee01c7445",
+          "ucm_blocksize_460583",
+          "ucm_uniqueid_460583"
+        ],
+        "temporary_cache_removed": true,
+        "service_returncode": 0
+      },
+      "temporary_cache_absent": true,
+      "shared_memory_absent": true
+    },
+    {
+      "n": 35,
+      "early_prefetch": true,
+      "campaign": "validation-n35-on",
+      "arm": "R1-N35-early1",
+      "passed": true,
+      "formal_sha256": "1ae8d361148f19e6650b75064b5fd90bcac99c681ba7febcee07c663a6591b27",
+      "formal_order": [
+        7,
+        12,
+        30,
+        34,
+        4,
+        29,
+        9,
+        2,
+        6,
+        33,
+        13,
+        1,
+        14,
+        10,
+        22,
+        19,
+        21,
+        15,
+        25,
+        18,
+        3,
+        24,
+        27,
+        17,
+        8,
+        16,
+        31,
+        20,
+        26,
+        32,
+        11,
+        5,
+        28,
+        0,
+        23
+      ],
+      "warmup_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "performance": {
+        "requests": 35,
+        "successful_requests": 35,
+        "failed_requests": 0,
+        "duration_s": 5.6272079,
+        "input_tokens": 1400000,
+        "output_tokens": 35,
+        "requests_per_s": 6.219780861481944,
+        "input_tokens_per_s": 248791.23445927774,
+        "output_tokens_per_s": 6.219780861481944,
+        "ttft_ms": {
+          "count": 35,
+          "mean": 1174.839177195515,
+          "min": 348.08047115802765,
+          "max": 1750.282308086753,
+          "p50": 1220.4863671213388,
+          "p95": 1438.2083462551236,
+          "p99": 1647.1828019991506
+        },
+        "e2e_ms": {
+          "count": 35,
+          "mean": 1174.8719336731094,
+          "min": 348.1240328401327,
+          "max": 1750.3038961440325,
+          "p50": 1220.509361475706,
+          "p95": 1438.2470501586795,
+          "p99": 1647.210462130605
+        },
+        "tpot_ms": null,
+        "stream": true,
+        "checks": {
+          "request_count": true,
+          "all_requests_succeeded": true,
+          "input_identity": true,
+          "input_token_counts": true,
+          "output_token_counts": true
+        },
+        "throughput_definition": "All successful input tokens, including reused prefix tokens, divided by AISBench Benchmark Duration."
+      },
+      "observed_max_concurrency": 8,
+      "checks": {
+        "request_count": true,
+        "all_requests_succeeded": true,
+        "input_identity": true,
+        "input_token_counts": true,
+        "output_token_counts": true,
+        "aisbench_exit_success": true,
+        "request_mapping": true,
+        "matches_complete": true,
+        "loaded_shards_match": true,
+        "completed_load_shards": true,
+        "load_plans_match": true,
+        "source_accounting_exact": true,
+        "source_counts_in_range": true,
+        "physical_reads_reconciled": true,
+        "no_native_errors": true,
+        "exact_prefix_hits": true,
+        "queue_schema": true,
+        "no_gpu_compilation_in_measurement": true
+      },
+      "observation": {
+        "sources": {
+          "checks": {
+            "request_mapping": true,
+            "matches_complete": true,
+            "loaded_shards_match": true,
+            "completed_load_shards": true,
+            "load_plans_match": true,
+            "source_accounting_exact": true,
+            "source_counts_in_range": true,
+            "physical_reads_reconciled": true,
+            "no_native_errors": true,
+            "exact_prefix_hits": true
+          },
+          "hbm_tokens": 139712,
+          "external_tokens": 1119168,
+          "original_l1_shards": 84491,
+          "original_l2_shards": 160327,
+          "l2_shards_bounds": [
+            160327,
+            160327
+          ],
+          "token_equivalents": {
+            "hbm": 139712,
+            "l1": 386244.5714285714,
+            "l2": 732923.4285714285
+          },
+          "fractions_of_reused_tokens": {
+            "hbm": 0.11098118962887646,
+            "l1": 0.3068160360229501,
+            "l2": 0.5822027743481734
+          },
+          "ssd_read_bytes": 13790687232.0,
+          "errors": {},
+          "definition": "L2 remains L2 after early prefetch into L1. Physical block-layer shards are converted to full-layer token equivalents.",
+          "limitation": "OFF only identifies aggregate L1/L2 sources; per-request source classes are not inferred."
+        },
+        "queue": {
+          "active_seconds": 5.536776928000001,
+          "mean_running": 2.1804169322676383,
+          "mean_waiting": 3.2126655952211767,
+          "running_waiting_ratio": 0.6786940214104442,
+          "maximum_running": 3,
+          "maximum_waiting": 7,
+          "running_integral": 12.072482164000002,
+          "waiting_integral": 17.787812745,
+          "soft_target_only": true,
+          "mean_waiting_normal": 1.3279277555536002,
+          "mean_waiting_skipped": 1.8847378396675758,
+          "normal_waiting_request_seconds": 7.352439758999998,
+          "skipped_waiting_request_seconds": 10.435372985999999,
+          "skipped_share_of_waiting_request_seconds": 0.5866585811081968,
+          "running_normal_waiting_ratio": 1.6419695447653657,
+          "waiting_by_cause": {
+            "early_pending": {
+              "label": "Early 查询/预取结果未就绪",
+              "request_seconds": 9.503735861,
+              "mean_waiting": 1.7164744010073287,
+              "share_of_waiting_request_seconds": 0.5342835567948857,
+              "maximum_waiting": 4
+            },
+            "early_resolved_awaiting_reschedule": {
+              "label": "Early 结果已返回，等待重新调度",
+              "request_seconds": 0.9316371249999996,
+              "mean_waiting": 0.16826343866024712,
+              "share_of_waiting_request_seconds": 0.05237502431331108,
+              "maximum_waiting": 4
+            },
+            "ordinary_waiting_unattributed": {
+              "label": "普通排队，具体调度约束未归因",
+              "request_seconds": 7.352439758999998,
+              "mean_waiting": 1.3279277555536002,
+              "share_of_waiting_request_seconds": 0.41334141889180304,
+              "maximum_waiting": 5
+            }
+          },
+          "waiting_by_queue_and_cause_request_seconds": {
+            "normal": {
+              "ordinary_waiting_unattributed": 7.352439758999998
+            },
+            "skipped": {
+              "early_pending": 9.503735861,
+              "early_resolved_awaiting_reschedule": 0.9316371249999996
+            }
+          },
+          "detailed_cause_sample_fraction": 1.0,
+          "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+          "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+          "schedule_events": {
+            "count": 29,
+            "request_observations": {
+              "running": 43,
+              "normal": 22,
+              "skipped": 50
+            },
+            "fractions": {
+              "running": 0.3739130434782609,
+              "normal": 0.19130434782608696,
+              "skipped": 0.43478260869565216
+            },
+            "waiting_cause_observations": {
+              "early_pending": 49,
+              "ordinary_waiting_unattributed": 22,
+              "early_resolved_awaiting_reschedule": 1
+            },
+            "waiting_cause_fractions": {
+              "early_pending": 0.6805555555555556,
+              "ordinary_waiting_unattributed": 0.3055555555555556,
+              "early_resolved_awaiting_reschedule": 0.013888888888888888
+            },
+            "events_with_waiting_fraction": 0.9655172413793104
+          },
+          "time_weighted_fractions": {
+            "running": 0.40429882560742264,
+            "normal": 0.24622796865894134,
+            "skipped": 0.3494732057336359
+          }
+        },
+        "metric_delta": {
+          "total_prefix_query_blocks_total": 21875.0,
+          "total_prefix_query_tokens_total": 1400000.0,
+          "posix_s2h_bytes_total": 13790687232.0,
+          "posix_lookup_query_blocks_total": 13735.0,
+          "cache_load_shards_total": 244818.0,
+          "cache_dump_shards_total": 30870.0,
+          "load_bytes_total": 20118163968.0,
+          "save_bytes_total": 2536773120.0,
+          "gpu_hbm_hit_blocks_total": 2183.0,
+          "cache_load_success_shards_total": 244818.0,
+          "cache_posix_load_success_shards_total": 0.0,
+          "cache_load_wait_shards_total": 0.0,
+          "gpu_hbm_hit_tokens_total": 139712.0,
+          "cache_load_backend_shards_total": 0.0,
+          "posix_lookup_hit_blocks_total": 11530.0,
+          "cache_dump_backend_shards_total": 30870.0,
+          "ucm_hit_tokens_total": 1119168.0,
+          "cache_dump_bytes_total": 2655313920.0,
+          "posix_healthy_count_total": 12.0,
+          "cache_load_bytes_total": 21058265088.0,
+          "posix_h2s_bytes_total": 2655313920.0
+        },
+        "histogram_sum_delta_ms": {
+          "posix_load_task_duration_ms": 6593.099299818277,
+          "connector_update_connector_output_duration_ms": 0.06756186485290527,
+          "cache_dump_backend_wait_duration_ms": 1781.0351476073265,
+          "connector_register_kv_caches_duration_ms": 0.0,
+          "cache_dump_duration_ms": 28634.5758382231,
+          "connector_build_connector_meta_duration_ms": 7.362028583884239,
+          "cache_d2h_duration_ms": 4315.0413408875465,
+          "posix_s2h_bandwidth_gbps": 8063.056641829892,
+          "cache_shard_backend_wait_ms": 14.964539557695389,
+          "connector_update_state_after_alloc_duration_ms": 0.0715889036655426,
+          "connector_request_finished_all_groups_duration_ms": 3.700321540236473,
+          "connector_wait_for_save_duration_ms": 3.184819594025612,
+          "cache_dump_queue_wait_duration_ms": 24174.106499180198,
+          "cache_load_backend_submit_duration_ms": 13.46595399081707,
+          "posix_dump_task_duration_ms": 6318.96748393774,
+          "layerwise_layer_load_duration_ms": 2052.064247429371,
+          "interval_lookup_hit_rates": 27.97920000000001,
+          "cache_h2d_sync_ms": 590.8414646983147,
+          "cache_dump_backend_submit_duration_ms": 9.222650900483131,
+          "connector_get_kv_connector_stats_duration_ms": 33.15742872655392,
+          "connector_build_connector_worker_meta_duration_ms": 0.07628835737705231,
+          "connector_get_block_ids_with_load_errors_duration_ms": 0.047437846660614014,
+          "posix_load_queue_wait_duration_ms": 3.3077728003263474,
+          "cache_load_queue_wait_duration_ms": 36.41040250658989,
+          "cache_dump_bandwidth_gbps": 99.96539768940494,
+          "connector_get_num_new_matched_tokens_duration_ms": 93.943415209651,
+          "connector_get_block_size_duration_ms": 0.05624070763587952,
+          "save_completion_wait_duration": 1.2787036895751953,
+          "connector_start_load_kv_duration_ms": 30.607640743255615,
+          "cache_load_duration_ms": 2338.380891829729,
+          "connector_get_finished_duration_ms": 2.519547939300537,
+          "connector_has_connector_metadata_duration_ms": 0.385090708732605,
+          "layerwise_batch_load_duration_sum_ms": 2052.064247429371,
+          "posix_h2s_bandwidth_gbps": 213.2879185698073,
+          "cache_h2d_submit_ms": 910.2854635566473,
+          "connector_clear_connector_metadata_duration_ms": 0.07125735282897949,
+          "cache_dump_prereq_wait_ms": 2472.329117357731,
+          "cache_load_bandwidth_gbps": 4857.53097479242,
+          "cache_dump_mkbuf_duration_ms": 134.84240137040615,
+          "connector_bind_connector_metadata_duration_ms": 79.5670822262764,
+          "save_duration": 46461.96892738342,
+          "connector_save_kv_layer_duration_ms": 116.53843894600868,
+          "connector_handle_preemptions_duration_ms": 0.1174435019493103,
+          "posix_dump_queue_wait_duration_ms": 0.4932079464197159,
+          "connector_wait_for_layer_load_duration_ms": 1105.554411187768
+        }
+      },
+      "actual_layout": {
+        "connector_class": "EarlyLayerWiseConnector",
+        "block_size": 64,
+        "num_blocks": 5000,
+        "physical_block_bytes": 1204224,
+        "physical_shard_bytes": 86016,
+        "num_hidden_layers": 14,
+        "num_nextn_predict_layers": 0,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 16,
+        "max_model_len": 40960,
+        "cudagraph_mode": "FULL_AND_PIECEWISE",
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "sync_hook_installed": true,
+        "gpu_name": "NVIDIA L20X",
+        "gpu_capability": [
+          9,
+          0
+        ],
+        "torch": "2.13.0+cu130",
+        "cuda": "13.0"
+      },
+      "ucm_commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+      "native_libraries": [
+        {
+          "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77"
+        },
+        {
+          "path": "ucm/shared/metrics/libmetrics.so",
+          "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3"
+        },
+        {
+          "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "286fea27339e87bb06ba054ab966c7911e07130f5263c90e295c62618132c1b8"
+        },
+        {
+          "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d6d010ca6f2ab929f9ce3002e41e2ce66c7103c6882cf8df2bcaf817a8b76a5b"
+        },
+        {
+          "path": "ucm/store/cache/libcachestore.so",
+          "sha256": "da8b8e6aa1cae79815b5e39080c97720f2d2cd83579d67461923b61ae959a6cf"
+        },
+        {
+          "path": "ucm/store/compress/libcompressor.so",
+          "sha256": "5da58d1184d66e7cb400a2ba11cc3382f04b64207788f505477cc3a356406006"
+        },
+        {
+          "path": "ucm/store/delegator/libdelegator_store.so",
+          "sha256": "966b1dd1f81af2ba1ab910cdd0084548a3b3f8502467f614169a8040f19294e9"
+        },
+        {
+          "path": "ucm/store/empty/libemptystore.so",
+          "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f"
+        },
+        {
+          "path": "ucm/store/fake/libfakestore.so",
+          "sha256": "3db1a1ad9ec506d16b5d01c412f466155668d06cefe13e4b6fe91feb804dbcca"
+        },
+        {
+          "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bb9c3bcc71374aa980590ac87918f1afee5f25b66712f3ff5f9c7b839fbf903e"
+        },
+        {
+          "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bf04b02305f92d8a208faf69f3d166d208933137d67d12d68b99ffaaf93401b9"
+        },
+        {
+          "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "88e15b191757fa058676e540bef9e243bf87aa421b5ace96d569bda1d53c71b6"
+        },
+        {
+          "path": "ucm/store/posix/libposixstore.so",
+          "sha256": "a1c6ee6cf86a77e6ce61224add662e6981cc21935ed03c2e1b8adc5ccd692959"
+        }
+      ],
+      "vllm_version": "0.28.0",
+      "vllm_commit": "g2cf0a6915",
+      "cleanup": {
+        "finished": "2026-10-15T10:42:34.148607+00:00",
+        "owned_pids": [
+          464721,
+          465331,
+          465333,
+          465503,
+          465504,
+          465793,
+          465795,
+          466114,
+          466124
+        ],
+        "removed_shm": [
+          "ucm_early_f4b8fb0351934fd79f2a837496058902.sock",
+          "uc_shm_cache_f4b8fb0351934fd79f2a837496058902",
+          "ucm_blocksize_464721",
+          "ucm_uniqueid_464721"
+        ],
+        "temporary_cache_removed": true,
+        "service_returncode": 0
+      },
+      "temporary_cache_absent": true,
+      "shared_memory_absent": true
+    },
+    {
+      "n": 40,
+      "early_prefetch": false,
+      "campaign": "validation-n40",
+      "arm": "R1-N40-early0-attempt2",
+      "passed": true,
+      "formal_sha256": "40d9acae334b4f6654b9df8cca1e480cce65b50d982c8f564e00079412a569a5",
+      "formal_order": [
+        7,
+        37,
+        39,
+        12,
+        30,
+        34,
+        4,
+        29,
+        9,
+        2,
+        6,
+        33,
+        13,
+        1,
+        14,
+        10,
+        22,
+        19,
+        21,
+        15,
+        25,
+        35,
+        18,
+        3,
+        24,
+        27,
+        17,
+        36,
+        8,
+        16,
+        31,
+        20,
+        26,
+        32,
+        11,
+        5,
+        28,
+        0,
+        23,
+        38
+      ],
+      "warmup_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "performance": {
+        "requests": 40,
+        "successful_requests": 40,
+        "failed_requests": 0,
+        "duration_s": 8.1286834,
+        "input_tokens": 1600000,
+        "output_tokens": 40,
+        "requests_per_s": 4.920846099135808,
+        "input_tokens_per_s": 196833.84396543234,
+        "output_tokens_per_s": 4.920846099135808,
+        "ttft_ms": {
+          "count": 40,
+          "mean": 1515.3111914172769,
+          "min": 339.9083074182272,
+          "max": 1791.6911449283361,
+          "p50": 1644.6286886930466,
+          "p95": 1750.206357985735,
+          "p99": 1775.9399131126702
+        },
+        "e2e_ms": {
+          "count": 40,
+          "mean": 1515.344967180863,
+          "min": 339.9523124098778,
+          "max": 1791.7135525494814,
+          "p50": 1644.6584919467568,
+          "p95": 1750.2307537011802,
+          "p99": 1775.970636922866
+        },
+        "tpot_ms": null,
+        "stream": true,
+        "checks": {
+          "request_count": true,
+          "all_requests_succeeded": true,
+          "input_identity": true,
+          "input_token_counts": true,
+          "output_token_counts": true
+        },
+        "throughput_definition": "All successful input tokens, including reused prefix tokens, divided by AISBench Benchmark Duration."
+      },
+      "observed_max_concurrency": 8,
+      "checks": {
+        "request_count": true,
+        "all_requests_succeeded": true,
+        "input_identity": true,
+        "input_token_counts": true,
+        "output_token_counts": true,
+        "aisbench_exit_success": true,
+        "request_mapping": true,
+        "matches_complete": true,
+        "loaded_shards_match": true,
+        "completed_load_shards": true,
+        "load_plans_match": true,
+        "source_accounting_exact": true,
+        "source_counts_in_range": true,
+        "physical_reads_reconciled": true,
+        "no_native_errors": true,
+        "exact_prefix_hits": true,
+        "queue_schema": true,
+        "no_gpu_compilation_in_measurement": true
+      },
+      "observation": {
+        "sources": {
+          "checks": {
+            "request_mapping": true,
+            "matches_complete": true,
+            "loaded_shards_match": true,
+            "completed_load_shards": true,
+            "load_plans_match": true,
+            "source_accounting_exact": true,
+            "source_counts_in_range": true,
+            "physical_reads_reconciled": true,
+            "no_native_errors": true,
+            "exact_prefix_hits": true
+          },
+          "hbm_tokens": 71936,
+          "external_tokens": 1366784,
+          "original_l1_shards": 58484.0,
+          "original_l2_shards": 240500.0,
+          "l2_shards_bounds": [
+            240500.0,
+            240500.0
+          ],
+          "token_equivalents": {
+            "hbm": 71936,
+            "l1": 267355.4285714286,
+            "l2": 1099428.5714285714
+          },
+          "fractions_of_reused_tokens": {
+            "hbm": 0.05,
+            "l1": 0.18582867310625317,
+            "l2": 0.7641713268937468
+          },
+          "ssd_read_bytes": 20686848000.0,
+          "errors": {},
+          "definition": "L2 remains L2 after early prefetch into L1. Physical block-layer shards are converted to full-layer token equivalents.",
+          "limitation": "OFF only identifies aggregate L1/L2 sources; per-request source classes are not inferred."
+        },
+        "queue": {
+          "active_seconds": 8.037870199999999,
+          "mean_running": 2.785148878492713,
+          "mean_waiting": 2.681726673814663,
+          "running_waiting_ratio": 1.0385655278324601,
+          "maximum_running": 3,
+          "maximum_waiting": 5,
+          "running_integral": 22.386665172999997,
+          "waiting_integral": 21.555370915999998,
+          "soft_target_only": true,
+          "mean_waiting_normal": 2.681726673814663,
+          "mean_waiting_skipped": 0.0,
+          "normal_waiting_request_seconds": 21.555370915999998,
+          "skipped_waiting_request_seconds": 0.0,
+          "skipped_share_of_waiting_request_seconds": 0.0,
+          "running_normal_waiting_ratio": 1.0385655278324601,
+          "waiting_by_cause": {
+            "ordinary_waiting_unattributed": {
+              "label": "普通排队，具体调度约束未归因",
+              "request_seconds": 21.555370915999998,
+              "mean_waiting": 2.681726673814663,
+              "share_of_waiting_request_seconds": 1.0,
+              "maximum_waiting": 5
+            }
+          },
+          "waiting_by_queue_and_cause_request_seconds": {
+            "normal": {
+              "ordinary_waiting_unattributed": 21.555370915999998
+            },
+            "skipped": {}
+          },
+          "detailed_cause_sample_fraction": 1.0,
+          "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+          "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+          "schedule_events": {
+            "count": 21,
+            "request_observations": {
+              "running": 59,
+              "normal": 51,
+              "skipped": 0
+            },
+            "fractions": {
+              "running": 0.5363636363636364,
+              "normal": 0.4636363636363636,
+              "skipped": 0.0
+            },
+            "waiting_cause_observations": {
+              "ordinary_waiting_unattributed": 51
+            },
+            "waiting_cause_fractions": {
+              "ordinary_waiting_unattributed": 1.0
+            },
+            "events_with_waiting_fraction": 0.8571428571428571
+          },
+          "time_weighted_fractions": {
+            "running": 0.5094589865535167,
+            "normal": 0.4905410134464832,
+            "skipped": 0.0
+          }
+        },
+        "metric_delta": {
+          "total_prefix_query_blocks_total": 25000.0,
+          "total_prefix_query_tokens_total": 1600000.0,
+          "posix_s2h_bytes_total": 20686848000.0,
+          "posix_lookup_query_blocks_total": 19339.0,
+          "cache_load_shards_total": 298984.0,
+          "cache_dump_shards_total": 35280.0,
+          "load_bytes_total": 24569309184.0,
+          "save_bytes_total": 2899169280.0,
+          "cache_lookup_hit_blocks_total": 4537.0,
+          "gpu_hbm_hit_blocks_total": 1124.0,
+          "cache_load_success_shards_total": 58484.0,
+          "cache_posix_load_success_shards_total": 240500.0,
+          "cache_lookup_miss_blocks_total": 19339.0,
+          "cache_load_wait_shards_total": 240500.0,
+          "gpu_hbm_hit_tokens_total": 71936.0,
+          "cache_load_backend_shards_total": 240500.0,
+          "cache_dump_backend_shards_total": 35280.0,
+          "ucm_hit_tokens_total": 1366784.0,
+          "posix_lookup_hit_blocks_total": 16819.0,
+          "cache_dump_bytes_total": 3034644480.0,
+          "posix_healthy_count_total": 13.0,
+          "cache_load_bytes_total": 25717407744.0,
+          "posix_h2s_bytes_total": 3034644480.0
+        },
+        "histogram_sum_delta_ms": {
+          "posix_load_task_duration_ms": 1046328.3419180661,
+          "cache_lookup_duration_ms": 36.949408,
+          "connector_update_connector_output_duration_ms": 0.041445717215538025,
+          "cache_dump_backend_wait_duration_ms": 2579.6015318483114,
+          "connector_register_kv_caches_duration_ms": 0.0,
+          "cache_dump_duration_ms": 3623.3893055468798,
+          "cache_d2h_duration_ms": 1457.925919443369,
+          "connector_build_connector_meta_duration_ms": 1.218290999531746,
+          "posix_s2h_bandwidth_gbps": 42205.73958167744,
+          "cache_shard_backend_wait_ms": 5093.6714597046375,
+          "connector_update_state_after_alloc_duration_ms": 0.08476525545120239,
+          "connector_request_finished_all_groups_duration_ms": 0.15351548790931702,
+          "connector_wait_for_save_duration_ms": 5.335472524166107,
+          "cache_dump_queue_wait_duration_ms": 1913.0064863711596,
+          "cache_load_backend_submit_duration_ms": 4317.582754418254,
+          "posix_dump_task_duration_ms": 2959.6393276005983,
+          "layerwise_layer_load_duration_ms": 6595.8549696952105,
+          "interval_lookup_hit_rates": 34.16960000000001,
+          "cache_h2d_sync_ms": 171.16278037428856,
+          "cache_dump_backend_submit_duration_ms": 16.731660813093185,
+          "connector_get_kv_connector_stats_duration_ms": 29.803724959492683,
+          "connector_build_connector_worker_meta_duration_ms": 0.05564466118812561,
+          "connector_get_block_ids_with_load_errors_duration_ms": 0.03797188401222229,
+          "posix_load_queue_wait_duration_ms": 170.17271555960178,
+          "cache_load_queue_wait_duration_ms": 2348.727226257324,
+          "cache_dump_bandwidth_gbps": 610.2401464283271,
+          "connector_get_num_new_matched_tokens_duration_ms": 262.67977990210056,
+          "connector_get_block_size_duration_ms": 0.08513778448104858,
+          "save_completion_wait_duration": 2.930255889892578,
+          "connector_start_load_kv_duration_ms": 11.267853900790215,
+          "cache_load_duration_ms": 10909.488121047616,
+          "cache_lookup_backend_duration_ms": 16.287181000000004,
+          "connector_get_finished_duration_ms": 0.41677430272102356,
+          "connector_has_connector_metadata_duration_ms": 0.3957059234380722,
+          "layerwise_batch_load_duration_sum_ms": 6595.8549696952105,
+          "posix_h2s_bandwidth_gbps": 337.71067862612995,
+          "cache_h2d_submit_ms": 1065.9994948655367,
+          "connector_clear_connector_metadata_duration_ms": 0.06717629730701447,
+          "cache_dump_prereq_wait_ms": 1322.8500746190548,
+          "cache_load_bandwidth_gbps": 1513.4289691800482,
+          "cache_dump_mkbuf_duration_ms": 232.8073438256979,
+          "connector_bind_connector_metadata_duration_ms": 77.73803360760212,
+          "save_duration": 13591.481485366821,
+          "connector_save_kv_layer_duration_ms": 45.290276408195496,
+          "connector_handle_preemptions_duration_ms": 0.09694322943687439,
+          "posix_dump_queue_wait_duration_ms": 0.8701551705598831,
+          "connector_wait_for_layer_load_duration_ms": 5822.668032720685
+        }
+      },
+      "actual_layout": {
+        "connector_class": "UCMLayerWiseConnector",
+        "block_size": 64,
+        "num_blocks": 5000,
+        "physical_block_bytes": 1204224,
+        "physical_shard_bytes": 86016,
+        "num_hidden_layers": 14,
+        "num_nextn_predict_layers": 0,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 16,
+        "max_model_len": 40960,
+        "cudagraph_mode": "FULL_AND_PIECEWISE",
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "sync_hook_installed": true,
+        "gpu_name": "NVIDIA L20X",
+        "gpu_capability": [
+          9,
+          0
+        ],
+        "torch": "2.13.0+cu130",
+        "cuda": "13.0"
+      },
+      "ucm_commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+      "native_libraries": [
+        {
+          "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77"
+        },
+        {
+          "path": "ucm/shared/metrics/libmetrics.so",
+          "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3"
+        },
+        {
+          "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "286fea27339e87bb06ba054ab966c7911e07130f5263c90e295c62618132c1b8"
+        },
+        {
+          "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d6d010ca6f2ab929f9ce3002e41e2ce66c7103c6882cf8df2bcaf817a8b76a5b"
+        },
+        {
+          "path": "ucm/store/cache/libcachestore.so",
+          "sha256": "da8b8e6aa1cae79815b5e39080c97720f2d2cd83579d67461923b61ae959a6cf"
+        },
+        {
+          "path": "ucm/store/compress/libcompressor.so",
+          "sha256": "5da58d1184d66e7cb400a2ba11cc3382f04b64207788f505477cc3a356406006"
+        },
+        {
+          "path": "ucm/store/delegator/libdelegator_store.so",
+          "sha256": "966b1dd1f81af2ba1ab910cdd0084548a3b3f8502467f614169a8040f19294e9"
+        },
+        {
+          "path": "ucm/store/empty/libemptystore.so",
+          "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f"
+        },
+        {
+          "path": "ucm/store/fake/libfakestore.so",
+          "sha256": "3db1a1ad9ec506d16b5d01c412f466155668d06cefe13e4b6fe91feb804dbcca"
+        },
+        {
+          "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bb9c3bcc71374aa980590ac87918f1afee5f25b66712f3ff5f9c7b839fbf903e"
+        },
+        {
+          "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bf04b02305f92d8a208faf69f3d166d208933137d67d12d68b99ffaaf93401b9"
+        },
+        {
+          "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "88e15b191757fa058676e540bef9e243bf87aa421b5ace96d569bda1d53c71b6"
+        },
+        {
+          "path": "ucm/store/posix/libposixstore.so",
+          "sha256": "a1c6ee6cf86a77e6ce61224add662e6981cc21935ed03c2e1b8adc5ccd692959"
+        }
+      ],
+      "vllm_version": "0.28.0",
+      "vllm_commit": "g2cf0a6915",
+      "cleanup": {
+        "finished": "2026-10-15T10:53:01.259639+00:00",
+        "owned_pids": [
+          472800,
+          473174,
+          473176,
+          473344,
+          473345,
+          473614,
+          473616,
+          473907,
+          473935,
+          474178
+        ],
+        "removed_shm": [
+          "uc_shm_cache_7c485c544b61470cb4e4c21876aa7130",
+          "ucm_blocksize_472800",
+          "ucm_uniqueid_472800"
+        ],
+        "temporary_cache_removed": true,
+        "service_returncode": 0
+      },
+      "temporary_cache_absent": true,
+      "shared_memory_absent": true
+    },
+    {
+      "n": 40,
+      "early_prefetch": true,
+      "campaign": "validation-n40",
+      "arm": "R1-N40-early1",
+      "passed": true,
+      "formal_sha256": "40d9acae334b4f6654b9df8cca1e480cce65b50d982c8f564e00079412a569a5",
+      "formal_order": [
+        7,
+        37,
+        39,
+        12,
+        30,
+        34,
+        4,
+        29,
+        9,
+        2,
+        6,
+        33,
+        13,
+        1,
+        14,
+        10,
+        22,
+        19,
+        21,
+        15,
+        25,
+        35,
+        18,
+        3,
+        24,
+        27,
+        17,
+        36,
+        8,
+        16,
+        31,
+        20,
+        26,
+        32,
+        11,
+        5,
+        28,
+        0,
+        23,
+        38
+      ],
+      "warmup_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "performance": {
+        "requests": 40,
+        "successful_requests": 40,
+        "failed_requests": 0,
+        "duration_s": 7.0899428,
+        "input_tokens": 1600000,
+        "output_tokens": 40,
+        "requests_per_s": 5.641794458482796,
+        "input_tokens_per_s": 225671.77833931183,
+        "output_tokens_per_s": 5.641794458482796,
+        "ttft_ms": {
+          "count": 40,
+          "mean": 1306.1657503712922,
+          "min": 330.1691748201847,
+          "max": 1663.607781752944,
+          "p50": 1364.0307486057281,
+          "p95": 1656.8325096741319,
+          "p99": 1663.2866038195789
+        },
+        "e2e_ms": {
+          "count": 40,
+          "mean": 1306.1981725972146,
+          "min": 330.21618612110615,
+          "max": 1663.6407561600208,
+          "p50": 1364.0616992488503,
+          "p95": 1656.8711830303073,
+          "p99": 1663.3134311623871
+        },
+        "tpot_ms": null,
+        "stream": true,
+        "checks": {
+          "request_count": true,
+          "all_requests_succeeded": true,
+          "input_identity": true,
+          "input_token_counts": true,
+          "output_token_counts": true
+        },
+        "throughput_definition": "All successful input tokens, including reused prefix tokens, divided by AISBench Benchmark Duration."
+      },
+      "observed_max_concurrency": 8,
+      "checks": {
+        "request_count": true,
+        "all_requests_succeeded": true,
+        "input_identity": true,
+        "input_token_counts": true,
+        "output_token_counts": true,
+        "aisbench_exit_success": true,
+        "request_mapping": true,
+        "matches_complete": true,
+        "loaded_shards_match": true,
+        "completed_load_shards": true,
+        "load_plans_match": true,
+        "source_accounting_exact": true,
+        "source_counts_in_range": true,
+        "physical_reads_reconciled": true,
+        "no_native_errors": true,
+        "exact_prefix_hits": true,
+        "queue_schema": true,
+        "no_gpu_compilation_in_measurement": true
+      },
+      "observation": {
+        "sources": {
+          "checks": {
+            "request_mapping": true,
+            "matches_complete": true,
+            "loaded_shards_match": true,
+            "completed_load_shards": true,
+            "load_plans_match": true,
+            "source_accounting_exact": true,
+            "source_counts_in_range": true,
+            "physical_reads_reconciled": true,
+            "no_native_errors": true,
+            "exact_prefix_hits": true
+          },
+          "hbm_tokens": 71936,
+          "external_tokens": 1366784,
+          "original_l1_shards": 59069,
+          "original_l2_shards": 239915,
+          "l2_shards_bounds": [
+            239915,
+            239915
+          ],
+          "token_equivalents": {
+            "hbm": 71936,
+            "l1": 270029.71428571426,
+            "l2": 1096754.2857142857
+          },
+          "fractions_of_reused_tokens": {
+            "hbm": 0.05,
+            "l1": 0.18768746822572444,
+            "l2": 0.7623125317742755
+          },
+          "ssd_read_bytes": 20636528640.0,
+          "errors": {},
+          "definition": "L2 remains L2 after early prefetch into L1. Physical block-layer shards are converted to full-layer token equivalents.",
+          "limitation": "OFF only identifies aggregate L1/L2 sources; per-request source classes are not inferred."
+        },
+        "queue": {
+          "active_seconds": 6.979675526999997,
+          "mean_running": 1.7449511681289946,
+          "mean_waiting": 4.024208778237093,
+          "running_waiting_ratio": 0.4336134788944561,
+          "maximum_running": 3,
+          "maximum_waiting": 8,
+          "running_integral": 12.179192964,
+          "waiting_integral": 28.087671524999994,
+          "soft_target_only": true,
+          "mean_waiting_normal": 0.5576657417587718,
+          "mean_waiting_skipped": 3.4665430364783227,
+          "normal_waiting_request_seconds": 3.89232593,
+          "skipped_waiting_request_seconds": 24.195345595000006,
+          "skipped_share_of_waiting_request_seconds": 0.8614222639802824,
+          "running_normal_waiting_ratio": 3.129027009308031,
+          "waiting_by_cause": {
+            "early_pending": {
+              "label": "Early 查询/预取结果未就绪",
+              "request_seconds": 23.140456857999986,
+              "mean_waiting": 3.315405819150767,
+              "share_of_waiting_request_seconds": 0.8238652619318536,
+              "maximum_waiting": 8
+            },
+            "early_resolved_awaiting_reschedule": {
+              "label": "Early 结果已返回，等待重新调度",
+              "request_seconds": 1.0548887369999997,
+              "mean_waiting": 0.15113721732755275,
+              "share_of_waiting_request_seconds": 0.03755700204842808,
+              "maximum_waiting": 4
+            },
+            "ordinary_waiting_unattributed": {
+              "label": "普通排队，具体调度约束未归因",
+              "request_seconds": 3.89232593,
+              "mean_waiting": 0.5576657417587718,
+              "share_of_waiting_request_seconds": 0.13857773601971804,
+              "maximum_waiting": 5
+            }
+          },
+          "waiting_by_queue_and_cause_request_seconds": {
+            "normal": {
+              "ordinary_waiting_unattributed": 3.89232593
+            },
+            "skipped": {
+              "early_pending": 23.140456857999986,
+              "early_resolved_awaiting_reschedule": 1.0548887369999997
+            }
+          },
+          "detailed_cause_sample_fraction": 1.0,
+          "counting": "State held from each saved snapshot until the next; averages use nonempty-queue time. Causes are mutually exclusive observed states/last decisions, not proof of continuous physical bottlenecks. waiting_ready in schema 2 means the ordinary queue, not Early READY.",
+          "limitations": "No unique-request count or exact per-request waiting latency is inferred from aggregate snapshots. Token budget, sequence limit and head-of-line effects remain unattributed unless explicitly observed.",
+          "schedule_events": {
+            "count": 135,
+            "request_observations": {
+              "running": 45,
+              "normal": 11,
+              "skipped": 738
+            },
+            "fractions": {
+              "running": 0.05667506297229219,
+              "normal": 0.013853904282115869,
+              "skipped": 0.929471032745592
+            },
+            "waiting_cause_observations": {
+              "early_pending": 737,
+              "ordinary_waiting_unattributed": 11,
+              "early_resolved_awaiting_reschedule": 1
+            },
+            "waiting_cause_fractions": {
+              "early_pending": 0.9839786381842457,
+              "ordinary_waiting_unattributed": 0.014686248331108143,
+              "early_resolved_awaiting_reschedule": 0.0013351134846461949
+            },
+            "events_with_waiting_fraction": 0.9925925925925926
+          },
+          "time_weighted_fractions": {
+            "running": 0.3024619154870398,
+            "normal": 0.09666324853933676,
+            "skipped": 0.6008748359736238
+          }
+        },
+        "metric_delta": {
+          "total_prefix_query_blocks_total": 25000.0,
+          "total_prefix_query_tokens_total": 1600000.0,
+          "posix_s2h_bytes_total": 20636528640.0,
+          "posix_lookup_query_blocks_total": 19960.0,
+          "cache_load_shards_total": 298984.0,
+          "cache_dump_shards_total": 35280.0,
+          "load_bytes_total": 24569309184.0,
+          "save_bytes_total": 2899169280.0,
+          "gpu_hbm_hit_blocks_total": 1124.0,
+          "cache_load_success_shards_total": 298984.0,
+          "cache_posix_load_success_shards_total": 0.0,
+          "cache_load_wait_shards_total": 0.0,
+          "gpu_hbm_hit_tokens_total": 71936.0,
+          "cache_load_backend_shards_total": 0.0,
+          "posix_lookup_hit_blocks_total": 17440.0,
+          "cache_dump_backend_shards_total": 35280.0,
+          "ucm_hit_tokens_total": 1366784.0,
+          "cache_dump_bytes_total": 3034644480.0,
+          "posix_healthy_count_total": 12.0,
+          "cache_load_bytes_total": 25717407744.0,
+          "posix_h2s_bytes_total": 3034644480.0
+        },
+        "histogram_sum_delta_ms": {
+          "posix_load_task_duration_ms": 9367.949875071645,
+          "connector_update_connector_output_duration_ms": 0.203574076294899,
+          "cache_dump_backend_wait_duration_ms": 2113.2924500852823,
+          "connector_register_kv_caches_duration_ms": 0.0,
+          "cache_dump_duration_ms": 29964.137703180313,
+          "connector_build_connector_meta_duration_ms": 6.9396011531353,
+          "cache_d2h_duration_ms": 4877.042857930064,
+          "posix_s2h_bandwidth_gbps": 12372.151507613287,
+          "cache_shard_backend_wait_ms": 21.128516644239426,
+          "connector_update_state_after_alloc_duration_ms": 0.07247552275657654,
+          "connector_request_finished_all_groups_duration_ms": 4.846345633268356,
+          "connector_wait_for_save_duration_ms": 3.9258934557437897,
+          "cache_dump_queue_wait_duration_ms": 24905.058501288295,
+          "cache_load_backend_submit_duration_ms": 19.448906183242798,
+          "posix_dump_task_duration_ms": 6817.19764880836,
+          "layerwise_layer_load_duration_ms": 2377.795619890094,
+          "interval_lookup_hit_rates": 34.16960000000001,
+          "cache_h2d_sync_ms": 741.6842356324196,
+          "cache_dump_backend_submit_duration_ms": 12.857411056756973,
+          "connector_get_kv_connector_stats_duration_ms": 91.4660096168518,
+          "connector_build_connector_worker_meta_duration_ms": 0.27303025126457214,
+          "connector_get_block_ids_with_load_errors_duration_ms": 0.1412518322467804,
+          "posix_load_queue_wait_duration_ms": 5.002522841095924,
+          "cache_load_queue_wait_duration_ms": 40.851036086678505,
+          "cache_dump_bandwidth_gbps": 143.56860960727448,
+          "connector_get_num_new_matched_tokens_duration_ms": 103.88307273387909,
+          "connector_get_block_size_duration_ms": 0.08190982043743134,
+          "save_completion_wait_duration": 1.4968070983886719,
+          "connector_start_load_kv_duration_ms": 36.483634263277054,
+          "cache_load_duration_ms": 2791.838373988867,
+          "connector_get_finished_duration_ms": 4.157885909080505,
+          "connector_has_connector_metadata_duration_ms": 0.4513002932071686,
+          "layerwise_batch_load_duration_sum_ms": 2377.795619890094,
+          "posix_h2s_bandwidth_gbps": 253.9992354882006,
+          "cache_h2d_submit_ms": 1046.1201760917902,
+          "connector_clear_connector_metadata_duration_ms": 0.210542231798172,
+          "cache_dump_prereq_wait_ms": 2893.9838986843824,
+          "cache_load_bandwidth_gbps": 5803.347550360302,
+          "cache_dump_mkbuf_duration_ms": 167.2882679849863,
+          "connector_bind_connector_metadata_duration_ms": 86.01952344179153,
+          "save_duration": 46835.74730491638,
+          "connector_save_kv_layer_duration_ms": 161.15314699709415,
+          "connector_handle_preemptions_duration_ms": 0.42899325489997864,
+          "posix_dump_queue_wait_duration_ms": 0.6574615836143494,
+          "connector_wait_for_layer_load_duration_ms": 1325.2012934535742
+        }
+      },
+      "actual_layout": {
+        "connector_class": "EarlyLayerWiseConnector",
+        "block_size": 64,
+        "num_blocks": 5000,
+        "physical_block_bytes": 1204224,
+        "physical_shard_bytes": 86016,
+        "num_hidden_layers": 14,
+        "num_nextn_predict_layers": 0,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 16,
+        "max_model_len": 40960,
+        "cudagraph_mode": "FULL_AND_PIECEWISE",
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "sync_hook_installed": true,
+        "gpu_name": "NVIDIA L20X",
+        "gpu_capability": [
+          9,
+          0
+        ],
+        "torch": "2.13.0+cu130",
+        "cuda": "13.0"
+      },
+      "ucm_commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+      "native_libraries": [
+        {
+          "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77"
+        },
+        {
+          "path": "ucm/shared/metrics/libmetrics.so",
+          "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3"
+        },
+        {
+          "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "286fea27339e87bb06ba054ab966c7911e07130f5263c90e295c62618132c1b8"
+        },
+        {
+          "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d6d010ca6f2ab929f9ce3002e41e2ce66c7103c6882cf8df2bcaf817a8b76a5b"
+        },
+        {
+          "path": "ucm/store/cache/libcachestore.so",
+          "sha256": "da8b8e6aa1cae79815b5e39080c97720f2d2cd83579d67461923b61ae959a6cf"
+        },
+        {
+          "path": "ucm/store/compress/libcompressor.so",
+          "sha256": "5da58d1184d66e7cb400a2ba11cc3382f04b64207788f505477cc3a356406006"
+        },
+        {
+          "path": "ucm/store/delegator/libdelegator_store.so",
+          "sha256": "966b1dd1f81af2ba1ab910cdd0084548a3b3f8502467f614169a8040f19294e9"
+        },
+        {
+          "path": "ucm/store/empty/libemptystore.so",
+          "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f"
+        },
+        {
+          "path": "ucm/store/fake/libfakestore.so",
+          "sha256": "3db1a1ad9ec506d16b5d01c412f466155668d06cefe13e4b6fe91feb804dbcca"
+        },
+        {
+          "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bb9c3bcc71374aa980590ac87918f1afee5f25b66712f3ff5f9c7b839fbf903e"
+        },
+        {
+          "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "bf04b02305f92d8a208faf69f3d166d208933137d67d12d68b99ffaaf93401b9"
+        },
+        {
+          "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "88e15b191757fa058676e540bef9e243bf87aa421b5ace96d569bda1d53c71b6"
+        },
+        {
+          "path": "ucm/store/posix/libposixstore.so",
+          "sha256": "a1c6ee6cf86a77e6ce61224add662e6981cc21935ed03c2e1b8adc5ccd692959"
+        }
+      ],
+      "vllm_version": "0.28.0",
+      "vllm_commit": "g2cf0a6915",
+      "cleanup": {
+        "finished": "2026-10-15T10:56:59.933732+00:00",
+        "owned_pids": [
+          476312,
+          476658,
+          476660,
+          476835,
+          476836,
+          477101,
+          477103,
+          477394,
+          477422
+        ],
+        "removed_shm": [
+          "ucm_early_ee8de2a11c024bf3977ccfa015120710.sock",
+          "uc_shm_cache_ee8de2a11c024bf3977ccfa015120710",
+          "ucm_blocksize_476312",
+          "ucm_uniqueid_476312"
+        ],
+        "temporary_cache_removed": true,
+        "service_returncode": 0
+      },
+      "temporary_cache_absent": true,
+      "shared_memory_absent": true
+    }
+  ],
+  "pairs": [
+    {
+      "n": 35,
+      "input_throughput_change_pct": 13.631399685801536,
+      "ttft_mean_change_pct": -12.830383299512494
+    },
+    {
+      "n": 40,
+      "input_throughput_change_pct": 14.650902402202725,
+      "ttft_mean_change_pct": -13.802144551599993
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "campaign": "validation-n35-final",
+      "arm": "R1-N35-early1",
+      "phase": "startup",
+      "reason": "OSError(98, 'Address already in use')"
+    },
+    {
+      "campaign": "validation-n40",
+      "arm": "R1-N40-early0",
+      "phase": "measurement",
+      "failed_checks": [
+        "no_gpu_compilation_in_measurement"
+      ]
+    },
+    {
+      "campaign": "validation-n35",
+      "arm": "R1-N35-early0",
+      "phase": "measurement",
+      "failed_checks": [
+        "no_gpu_compilation_in_measurement"
+      ]
+    }
+  ],
+  "startup_fix": "N35 off was retained. N35 on used only the SO_REUSEADDR preflight fix, archived in provenance/validation-startup-fix.diff. Inference and load logic are unchanged. N40 validates a full consecutive off/on campaign.",
+  "offline_tests": 16,
+  "real_client_integration": [
+    {
+      "passed": true,
+      "requests": 2,
+      "stream": true,
+      "scope": "protocol and real AISBench integration, no model performance"
+    },
+    {
+      "passed": true,
+      "requests": 2,
+      "stream": false,
+      "scope": "protocol and real AISBench integration, no model performance"
+    },
+    {
+      "passed": true,
+      "requests": 2,
+      "stream": true,
+      "failure_propagation": true,
+      "runtime_only_api_key": true,
+      "scope": "protocol and real AISBench integration, no model performance"
+    },
+    {
+      "passed": true,
+      "requests": 2,
+      "stream": true,
+      "failure_propagation": false,
+      "runtime_only_api_key": false,
+      "scope": "protocol and real AISBench integration, no model performance"
+    }
+  ],
+  "historical_analysis": {
+    "valid_arms_matched": 6,
+    "historical_invalid_compilation_detected": true
+  },
+  "docker_built": false,
+  "limitations": [
+    "One pair per N is a functional/protocol validation, not a statistical performance study.",
+    "Detailed observation overhead is not separately quantified.",
+    "The server environment was rebuilt from the chosen source; original native bytes are not fully available.",
+    "Benchmark package metadata has two retained historical conflicts; exercised completion paths passed."
+  ]
+}

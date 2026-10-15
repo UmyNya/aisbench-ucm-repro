@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "mode": "external",
+  "label": "existing-completion-service",
+  "experiment": {
+    "repetitions": 1,
+    "early_prefetch": [
+      false
+    ]
+  },
+  "observation": {
+    "enabled": false,
+    "require_exact_prefix_hits": false,
+    "reject_compilation_during_measurement": false
+  },
+  "preparation": {
+    "enabled": false,
+    "unrelated_warmup": false,
+    "wait_dump": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "status": "frozen",
+  "created": "20261014T035708Z",
+  "formal_runs": 6,
+  "formal_requests": 240,
+  "repetitions": 3,
+  "seed": 20260911,
+  "order": [
+    {
+      "repeat_id": 1,
+      "n": 40,
+      "early": 0,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R1.json",
+      "plan_sha256": "464f71b46bd4b2b63d8689570ce96e64be95300d67c501dbc1a060bab5135a61"
+    },
+    {
+      "repeat_id": 1,
+      "n": 40,
+      "early": 1,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R1.json",
+      "plan_sha256": "464f71b46bd4b2b63d8689570ce96e64be95300d67c501dbc1a060bab5135a61"
+    },
+    {
+      "repeat_id": 2,
+      "n": 40,
+      "early": 1,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R2.json",
+      "plan_sha256": "8cb06579a920799edb874ba35b88c65b5df535dd7c57c8f29c26b6d6c6087e7a"
+    },
+    {
+      "repeat_id": 2,
+      "n": 40,
+      "early": 0,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R2.json",
+      "plan_sha256": "8cb06579a920799edb874ba35b88c65b5df535dd7c57c8f29c26b6d6c6087e7a"
+    },
+    {
+      "repeat_id": 3,
+      "n": 40,
+      "early": 0,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R3.json",
+      "plan_sha256": "b2db618a7d5809b07c147bd029ba1c2a7ff6a90755da572e392daa5f38aededf"
+    },
+    {
+      "repeat_id": 3,
+      "n": 40,
+      "early": 1,
+      "order_seed": 20260911,
+      "plan": "$ORIGINAL_EXPERIMENT/configs/pair-R3.json",
+      "plan_sha256": "b2db618a7d5809b07c147bd029ba1c2a7ff6a90755da572e392daa5f38aededf"
+    }
+  ],
+  "work": "/tmp/ucm-n40-b8192-20261014T035708Z",
+  "changes": [
+    "max-num-batched-tokens:4096->8192",
+    "passive queue cause observation schema:2->3"
+  ],
+  "reference": "$ORIGINAL_WORKSPACE/experiment_n40_prefetch_repeats_20261012T112647Z/default_graph_seed20260911_20261013T015428Z",
+  "max_num_batched_tokens": 8192,
+  "user_confirmed_seed": 20260911
+}

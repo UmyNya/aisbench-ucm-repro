@@ -1,0 +1,14 @@
+diff --git a/src/aisbench_ucm/service.py b/src/aisbench_ucm/service.py
+index a88e529..bf99f56 100644
+--- a/src/aisbench_ucm/service.py
++++ b/src/aisbench_ucm/service.py
+@@ -325,6 +325,9 @@ class Service:
+                 "Insufficient /dev/shm; reserve L1 capacity plus metadata headroom"
+             )
+         with socket.socket() as sock:
++            # Match Uvicorn: a previous arm's TIME_WAIT connections must not
++            # block rebinding. An active listener still makes bind fail.
++            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+             sock.bind((c["server"]["host"], c["server"]["port"]))
+         self.scratch = tempfile.TemporaryDirectory(
+             prefix="abu-", dir=resolve_path(c["runtime"]["temp_root"])

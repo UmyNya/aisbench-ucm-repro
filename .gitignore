@@ -1,0 +1,17 @@
+.venv*/
+.work/
+sources/
+results/
+log/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+config.local.json
+
+# Conversation snapshots stay local.
+/provenance/prompts/
+/provenance/decisions.json

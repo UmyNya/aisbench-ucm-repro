@@ -1,0 +1,61 @@
+{
+  "commit": "520428c4d2eaa23cb12e4d47d70a7bb820f8d4e0",
+  "native": [
+    {
+      "path": "ucm/shared/infra/ucmlogger.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "5773f69ef0ec1af30d4eb83028cde3ba33b394e81690977509f09a2582efff77"
+    },
+    {
+      "path": "ucm/shared/metrics/libmetrics.so",
+      "sha256": "0f0f32d8e9176bd030e3ee87fe806a768b77eaeee6d966179ae9dcb7c45cd5f3"
+    },
+    {
+      "path": "ucm/shared/metrics/ucmmetrics.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "286fea27339e87bb06ba054ab966c7911e07130f5263c90e295c62618132c1b8"
+    },
+    {
+      "path": "ucm/shared/trans/ucmtrans.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "d6d010ca6f2ab929f9ce3002e41e2ce66c7103c6882cf8df2bcaf817a8b76a5b"
+    },
+    {
+      "path": "ucm/store/cache/libcachestore.so",
+      "sha256": "da8b8e6aa1cae79815b5e39080c97720f2d2cd83579d67461923b61ae959a6cf"
+    },
+    {
+      "path": "ucm/store/compress/libcompressor.so",
+      "sha256": "5da58d1184d66e7cb400a2ba11cc3382f04b64207788f505477cc3a356406006"
+    },
+    {
+      "path": "ucm/store/delegator/libdelegator_store.so",
+      "sha256": "966b1dd1f81af2ba1ab910cdd0084548a3b3f8502467f614169a8040f19294e9"
+    },
+    {
+      "path": "ucm/store/empty/libemptystore.so",
+      "sha256": "1bbd3afd66bd51a7eff4135d6c1b34802bd0b52df2a7fcc4f81eb1d5c40e480f"
+    },
+    {
+      "path": "ucm/store/fake/libfakestore.so",
+      "sha256": "3db1a1ad9ec506d16b5d01c412f466155668d06cefe13e4b6fe91feb804dbcca"
+    },
+    {
+      "path": "ucm/store/nfsstore/ucmnfsstore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "bb9c3bcc71374aa980590ac87918f1afee5f25b66712f3ff5f9c7b839fbf903e"
+    },
+    {
+      "path": "ucm/store/pcstore/ucmpcstore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "bf04b02305f92d8a208faf69f3d166d208933137d67d12d68b99ffaaf93401b9"
+    },
+    {
+      "path": "ucm/store/pipeline/ucmpipelinestore.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "88e15b191757fa058676e540bef9e243bf87aa421b5ace96d569bda1d53c71b6"
+    },
+    {
+      "path": "ucm/store/posix/libposixstore.so",
+      "sha256": "a1c6ee6cf86a77e6ce61224add662e6981cc21935ed03c2e1b8adc5ccd692959"
+    }
+  ],
+  "cuda_home": "$SERVER_SITE_PACKAGES/nvidia/cu13",
+  "created": "2026-10-15T09:55:07.194425+00:00",
+  "native_rebuilt": true,
+  "native_hashes_equal_original": false
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "historical_invalid_run": "20261014T035737Z-formal-R1-N40-early0-C8",
+  "detected_binary_writes": 2,
+  "scope": "Compiler qualification negative control; no model run"
+}

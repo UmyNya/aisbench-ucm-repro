@@ -1,0 +1,21 @@
+aisbench-ucm-repro
+Copyright 2026 UmyNya and contributors
+
+New orchestration, configuration, analysis, and documentation are licensed
+under Apache-2.0. Retained third-party notices take precedence for their files.
+
+- UCM: StorTecDev/ucm-prefetch, MIT (licenses/UCM-MIT.txt).
+- AISBench wrapper: rayn-zzz/aisbench_auto_tools_prefix, MIT
+  (licenses/aisbench-auto-tools-MIT.txt). Fetched at a pinned commit.
+  Each execution saves its adaptation diff alongside the outputs.
+- Frozen request text is mechanically expanded from GSM8K questions.
+  GSM8K: Copyright (c) 2021 OpenAI, MIT (licenses/GSM8K-MIT.txt).
+- vLLM and AISBench are separately installed dependencies; see their
+  distributions' license files. Model weights are not included.
+- runtime_hooks/ and queue_analysis.py derive from the original experiment's
+  observation scripts. The synchronization fix is supplied by pinned UCM.
+
+The optional historical compiled-kernel cache is a separate release artifact.
+It contains generated/cached artifacts from vLLM, DeepGEMM, Triton, PyTorch,
+and FlashInfer. Their notices are in licenses/. It is not a portable runtime
+or a replacement for the source/dependency lock.

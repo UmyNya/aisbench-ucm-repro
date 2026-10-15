@@ -1,0 +1,72 @@
+{
+  "created": "20261014T035708Z",
+  "input_manifest_sha256": "b595e331538eb07d5284f0b8de00232a444b51cb6d90c8c9d6ab83a08637cc5a",
+  "n_values": [
+    40
+  ],
+  "concurrency": 8,
+  "request_rate": 0,
+  "repetitions": 1,
+  "order": [
+    {
+      "n": 40,
+      "early": 0
+    },
+    {
+      "n": 40,
+      "early": 1
+    }
+  ],
+  "input_tokens": 40000,
+  "output_tokens": 1,
+  "prefix_reuse_tokens": 35968,
+  "hbm_gib": 5.003213882446289,
+  "l1_gib": 19,
+  "l2_gib": 128,
+  "prefill_threshold": 0,
+  "reset_hbm": false,
+  "pin_l1": false,
+  "seed": 20260911,
+  "trace": false,
+  "queue_ratio_soft_target": 1,
+  "queue_reference_tolerance": [
+    0.8,
+    1.25
+  ],
+  "queue_calibration_decision": "Fixed N, length, C8 closed loop, capacities and service settings leave no useful independent arrival-rate control. Use the predeclared random order, record observed queue ratios; do not search sequences for a target or favorable gain.",
+  "source_observation": "Unmodified native library; existing compact Early batch logs plus passive Python metric accumulation and activation records. Native per-request L1/L2 attribution may be unresolved; aggregate original native source counters are authoritative.",
+  "jit_policy": "No new GPU binary during actual formal requests. Initial affected runs remain archived as compilation-contaminated attempts; preserve valid runs and retry only affected points after supplementing inherited compiled kernels.",
+  "jit_cache_preparation": "$ORIGINAL_EXPERIMENT/evidence/inherited-compiled-cache.json",
+  "extension": false,
+  "manifest": "$ORIGINAL_EXPERIMENT/inputs/manifest-R3.json",
+  "evidence": "$ORIGINAL_EXPERIMENT/evidence",
+  "formal_runs": 2,
+  "formal_requests": 80,
+  "authorization": {
+    "scope": "Confirmed: n40 C8 fixed seed 20260911, off/on three paired rounds, batch8192, omit block/long-prefill/eager flags.",
+    "invalid": "Keep all attempts; repeat only demonstrably invalid arms, never on performance.",
+    "report": "Save a separate report with all performance, source and queue details; preserve baseline."
+  },
+  "hbm_bytes": 5372160000,
+  "expected_hbm_blocks": 5000,
+  "capacity_unit": "KV tokens across all 14 model layers",
+  "hbm_target_tokens": 320000,
+  "hbm_expected_tokens": 320000,
+  "l1_target_tokens": 1080000,
+  "l1_expected_complete_block_tokens": 1079552,
+  "l1_load_exclusive_shards": 1024,
+  "gpu_memory_utilization": 0.92,
+  "source_reference": "$ORIGINAL_WORKSPACE/experiment_c8_cache320k_1080k_20261012T084808Z/prompt.md",
+  "gpu_uuid": "GPU-36c1ba7f-5004-0576-92ae-5fd429e2e0dc",
+  "port": 18137,
+  "status": "frozen",
+  "repeat_id": 3,
+  "order_seed": 20260911,
+  "requested_omitted_flags": [
+    "--block-size",
+    "--long-prefill-token-threshold",
+    "--enforce-eager"
+  ],
+  "max_num_batched_tokens": 8192,
+  "queue_schema": 3
+}
